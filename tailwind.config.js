@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './page/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
@@ -16,6 +17,10 @@ module.exports = {
           orange: '#F5A623',
           violet: '#7928CA',
         },
+      },
+      backgroundImage: {
+        hero: 'url("../public/images/engagement/pillars.jpg")',
+        // hero: 'linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 97%), url("../public/images/engagement/pillars.jpg")',
       },
       keyframes: ({ theme }) => ({
         rerender: {

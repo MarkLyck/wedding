@@ -1,17 +1,19 @@
 import '@/styles/globals.css';
 import React from 'react';
 
-export default function RootLayout({
-  children,
-}: {
+import { inter } from '@/lib/fonts';
+
+type RootLayoutProps = {
   children: React.ReactNode;
-}) {
-  return (
-    <html>
-      <head>
-        <title>Mark & Grace wedding</title>
-      </head>
-      <body className="overflow-y-scroll bg-zinc-900">{children}</body>
-    </html>
-  );
-}
+};
+
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <html className={inter.className}>
+    <head>
+      <title>Mark & Grace wedding</title>
+    </head>
+    <body>{children}</body>
+  </html>
+);
+
+export default RootLayout;
