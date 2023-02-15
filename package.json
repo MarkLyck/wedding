@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "@next/font": "^13.1.6",
+    "class-variance-authority": "^0.4.0",
     "clsx": "1.2.1",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "6.0.0-beta.2",
     "styled-jsx": "5.1.0",
+    "tailwindcss-animate": "^1.0.5",
     "use-count-up": "3.0.1"
   },
   "devDependencies": {
