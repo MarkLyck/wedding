@@ -1,20 +1,20 @@
 type Tab = {
-  name: string;
-  href: string;
-  icon: any;
-  current: boolean;
-};
+  name: string
+  href: string
+  icon: any
+  current: boolean
+}
 
 type TabsProps = {
-  tabs: Tab[];
-};
+  tabs: Tab[]
+}
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(' ')
 }
 
 export const Tabs = ({ tabs }: TabsProps) => {
-  if (tabs.length === 0) return null;
+  if (tabs.length === 0) return null
 
   return (
     <div>
@@ -44,8 +44,8 @@ export const Tabs = ({ tabs }: TabsProps) => {
                 className={classNames(
                   tab.current
                     ? 'border-indigo-500 text-indigo-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                  'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm',
+                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+                  'group inline-flex items-center border-b-2 py-4 px-1 text-sm font-medium'
                 )}
                 aria-current={tab.current ? 'page' : undefined}
               >
@@ -65,5 +65,5 @@ export const Tabs = ({ tabs }: TabsProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
