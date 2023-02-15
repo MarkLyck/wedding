@@ -1,7 +1,7 @@
 type SectionProps = {
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export const Section = ({ title, description }: SectionProps) => {
   return (
@@ -9,5 +9,5 @@ export const Section = ({ title, description }: SectionProps) => {
       <h3>{title}</h3>
       <p>{description}</p>
     </section>
-  );
-};
+  )
+}

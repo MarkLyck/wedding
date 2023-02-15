@@ -1,5 +1,6 @@
-import { SectionHeader } from '@/ui/SectionHeader';
-import { Section } from './Section';
+import { SectionHeader } from '@/ui/SectionHeader'
+
+import { Section } from './Section'
 
 export const OurStory = () => {
   return (
@@ -14,5 +15,5 @@ export const OurStory = () => {
       <Section title="Married in D.C" description="Lorem ipsum " />
       <Section title="Celebrating in Copenhagen" description="Lorem ipsum " />
     </div>
-  );
-};
+  )
+}

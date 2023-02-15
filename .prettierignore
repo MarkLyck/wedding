@@ -1,0 +1,7 @@
+# Ignore artifacts:
+build
+
+# dev
+.vercel
+.node_modules
+*.log

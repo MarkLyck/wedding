@@ -1,11 +1,11 @@
-import '@/styles/globals.css';
-import React from 'react';
+import '@/styles/globals.css'
+import React from 'react'
 
-import { inter } from '@/lib/fonts';
+import { inter } from '@/lib/fonts'
 
 type RootLayoutProps = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html className={inter.className}>
@@ -14,6 +14,6 @@ const RootLayout = ({ children }: RootLayoutProps) => (
     </head>
     <body>{children}</body>
   </html>
-);
+)
 
-export default RootLayout;
+export default RootLayout
