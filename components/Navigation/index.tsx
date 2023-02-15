@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const NavLink = ({
   href,
   className,
   children,
 }: {
-  href: string;
-  className?: string;
-  children: React.ReactNode;
+  href: string
+  className?: string
+  children: React.ReactNode
 }) => (
   <Link
     href={href}
@@ -15,7 +15,7 @@ const NavLink = ({
   >
     {children}
   </Link>
-);
+)
 
 export const Navigation = () => {
   return (
@@ -34,5 +34,5 @@ export const Navigation = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}

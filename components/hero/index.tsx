@@ -1,5 +1,5 @@
-import { cormorantGaramond } from '@/lib/fonts';
-import { Navigation } from '@/components/Navigation';
+import { Navigation } from '@/components/Navigation'
+import { cormorantGaramond } from '@/lib/fonts'
 
 export const Hero = () => {
   return (
@@ -11,9 +11,7 @@ export const Hero = () => {
           className={`${cormorantGaramond.className} flex flex-col items-center justify-center mt-40`}
         >
           <h2 className="text-lg font-semibold text-black">Let's Celebrate</h2>
-          <p
-            className={`text-4xl font-500 tracking-tight text-black sm:text-5xl lg:text-6xl mb-4`}
-          >
+          <p className={`text-4xl font-500 tracking-tight text-black sm:text-5xl lg:text-6xl mb-4`}>
             Mark & Grace
           </p>
           <p className={`mx-auto max-w-xl text-xl text-black`}>
@@ -22,5 +20,5 @@ export const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
