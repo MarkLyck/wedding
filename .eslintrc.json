@@ -3,14 +3,16 @@
     "browser": true,
     "es2021": true
   },
+  "root": true,
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "tailwindcss"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -20,6 +22,9 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "tailwindcss": {
+      "callees": ["cn"]
     }
   },
   "rules": {
@@ -28,7 +33,8 @@
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
     "react/no-unescaped-entities": "off",
-    "no-prototype-builtins": "off"
+    "no-prototype-builtins": "off",
+    "tailwindcss/no-custom-classname": "off"
   },
   "ignorePatterns": ["scripts", "public/mockServiceWorker.js"]
 }

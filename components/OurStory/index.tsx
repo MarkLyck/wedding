@@ -9,7 +9,7 @@ export const OurStory = () => {
         title="A short timeline of our story"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud."
       />
-      <div className="relative">
+      <div className="relative flex flex-col gap-8 p-8">
         <div className="absolute top-4 bottom-4 left-1/2 w-0.5 bg-zinc-300" />
         <Section
           title="How we met"
@@ -25,13 +25,19 @@ export const OurStory = () => {
           imageSrc="/images/our_story/after_we_met.jpg"
           direction="left"
         />
-        <Section title="Got engaged" description="Lorem ipsum " imageSrc="" direction="right" />
-        <Section title="Married in D.C" description="Lorem ipsum " imageSrc="" direction="left" />
         <Section
-          title="Celebrating in Copenhagen"
-          description="Lorem ipsum "
-          imageSrc=""
+          title="Got engaged"
+          date="October 2021"
+          description="After our trip Grace moved to New York to specialize in pediatric dentistry where Mark joined slightly after."
+          imageSrc="/images/our_story/after_we_met.jpg"
           direction="right"
+        />
+        <Section
+          title="Married in D.C."
+          date="November 2022"
+          description="After our trip Grace moved to New York to specialize in pediatric dentistry where Mark joined slightly after."
+          imageSrc="/images/our_story/after_we_met.jpg"
+          direction="left"
         />
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { cva } from 'class-variance-authority'
 import Image from 'next/image'
 
 import { cormorantGaramond } from '@/lib/fonts'
@@ -10,27 +11,57 @@ type SectionProps = {
   direction: 'left' | 'right'
 }
 
-export const Section = ({ title, date, imageSrc, description, direction }: SectionProps) => {
-  return (
-    <section
-      className={`flex ${
-        direction === 'left' ? 'flex-row-reverse' : 'flex-row'
-      } w-full justify-center gap-24`}
-    >
-      <div className="flex w-1/2 justify-end">
-        <Image
-          src={imageSrc}
-          alt={title}
-          height={320}
-          width={320}
-          className="h-80 rounded object-cover object-center"
-        />
-      </div>
-      <div className="flex w-1/2 flex-col gap-2">
-        <h3 className={`${cormorantGaramond.className} text-4xl`}>{title}</h3>
-        <h4 className={`${cormorantGaramond.className} text-2xl`}>{date}</h4>
-        <p className="max-w-sm">{description}</p>
-      </div>
-    </section>
-  )
-}
+const sectionStyles = cva(['flex', 'w-full', 'justify-center', 'gap-24'], {
+  variants: {
+    direction: {
+      right: ['flex-row'],
+      left: ['flex-row-reverse'],
+    },
+  },
+})
+
+const imageStyles = cva(['flex', 'w-1/2'], {
+  variants: {
+    direction: {
+      right: ['justify-end'],
+      left: ['justify-start'],
+    },
+  },
+})
+
+const textContainerStyles = cva(['flex', 'w-1/2', 'flex-col', 'gap-2'], {
+  variants: {
+    direction: {
+      right: ['text-left'],
+      left: ['text-right'],
+    },
+  },
+})
+
+const descriptionStyles = cva(['max-w-sm'], {
+  variants: {
+    direction: {
+      right: ['text-left', 'mr-auto'],
+      left: ['text-right', 'ml-auto'],
+    },
+  },
+})
+
+export const Section = ({ title, date, imageSrc, description, direction }: SectionProps) => (
+  <section className={sectionStyles({ direction })}>
+    <div className={imageStyles({ direction })}>
+      <Image
+        src={imageSrc}
+        alt={title}
+        height={320}
+        width={320}
+        className="h-80 rounded object-cover object-center"
+      />
+    </div>
+    <div className={textContainerStyles({ direction })}>
+      <h3 className={`${cormorantGaramond.className} text-4xl`}>{title}</h3>
+      <h4 className={`${cormorantGaramond.className} text-2xl`}>{date}</h4>
+      <p className={descriptionStyles({ direction })}>{description}</p>
+    </div>
+  </section>
+)
