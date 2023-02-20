@@ -12,7 +12,13 @@ export const SectionHeader = ({ title, description }: titleProps) => {
   return (
     <div>
       <Title>{title}</Title>
-      <Image src={separator} width={160} height={16} alt="separator" className="mx-auto my-4" />
+      <Image
+        src={separator}
+        width={160}
+        height={16}
+        alt="separator"
+        className="mx-auto my-4"
+      />
       <Description>{description}</Description>
     </div>
   )

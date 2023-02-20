@@ -47,7 +47,13 @@ const descriptionStyles = cva(['max-w-sm'], {
   },
 })
 
-export const Section = ({ title, date, imageSrc, description, direction }: SectionProps) => (
+export const Section = ({
+  title,
+  date,
+  imageSrc,
+  description,
+  direction,
+}: SectionProps) => (
   <section className={sectionStyles({ direction })}>
     <div className={imageStyles({ direction })}>
       <Image
