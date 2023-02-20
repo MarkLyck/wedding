@@ -209,6 +209,14 @@ export function RSVPDialog() {
                     </Button>
                   ) : null}
                 </div>,
+                <div
+                  key="additional_guests"
+                  className="flex flex-col items-start gap-4"
+                >
+                  <Label htmlFor="wedding_rsvp" className="text-right">
+                    Extra activities
+                  </Label>
+                </div>,
               ]
             : null}
         </div>
