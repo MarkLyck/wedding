@@ -1,5 +1,6 @@
-import { cva } from 'class-variance-authority'
 import Image from 'next/image'
+
+import { cva } from 'class-variance-authority'
 
 import { cormorantGaramond } from '@/lib/fonts'
 
