@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
+import { useMutation } from '@tanstack/react-query'
 import { useDebounce } from 'ahooks'
 import { Plus, X } from 'lucide-react'
 
@@ -26,43 +27,87 @@ import type { Guest } from './guests'
 type FormState = {
   name: string
   guests: Guest[]
-  numberOfGuests: number
-  isAttendingWedding: boolean | null
-  isAttendingThursdayDinner: boolean | null
-  isAttendingSaturdayBrunch: boolean | null
-  foodRestrictions: boolean | null
-  needTransportation: boolean | null
-  willSubmitContent: 'yes' | 'no' | 'maybe' | null
+  number_of_guests: number
+  is_attending: boolean | null
+  welcome_dinner: boolean | null
+  saturday_brunch: boolean | null
+  food_restrictions: boolean | null
+  need_transportation: boolean | null
   notes: string
 }
 
-export const RSVPForm = () => {
-  const [name, setName] = useState('')
-  const [formState, setFormState] = useState<FormState>({
-    name: '',
-    guests: [],
-    isAttendingWedding: null,
-    isAttendingThursdayDinner: null,
-    isAttendingSaturdayBrunch: null,
-    numberOfGuests: 0,
-    foodRestrictions: null,
-    needTransportation: null,
-    willSubmitContent: null,
-    notes: '',
+type SubmitData = {
+  name: string
+  guests: string
+  number_of_guests: number
+  is_attending: boolean
+  welcome_dinner: boolean
+  saturday_brunch: boolean
+  food_restrictions: boolean
+  need_transportation: boolean
+  notes: string
+}
+
+const AIRTABLE_API_KEY =
+  'pat9RxLTubLn628rL.c4dc6feeec3a99abdc8cd996e884df1eb6e474b75e7777e552227098cd0a83d2'
+
+const getGuests = async () => {
+  return await fetch(
+    'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201?maxRecords=3&view=Grid%20view',
+    {
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    }
+  )
+}
+
+const createGuest = async (data: SubmitData) => {
+  return fetch('https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      records: [
+        {
+          fields: data,
+        },
+      ],
+    }),
   })
+}
+
+const initialFormState = {
+  name: '',
+  guests: [],
+  number_of_guests: 0,
+  is_attending: null,
+  welcome_dinner: null,
+  saturday_brunch: null,
+  food_restrictions: null,
+  need_transportation: null,
+  notes: '',
+}
+
+export const RSVPForm = () => {
+  const { mutate: submitFormData } = useMutation({
+    mutationKey: ['create-guest'],
+    mutationFn: createGuest,
+  })
+  const [formState, setFormState] = useState<FormState>(initialFormState)
   const [guests, setGuests] = useState<Guest[]>([])
-  const [rsvp, setRsvp] = useState<string | null>(null)
-  const debouncedName = useDebounce(name, { wait: 1000 })
+  const debouncedName = useDebounce(formState.name, { wait: 1000 })
 
-  const isAttending = rsvp === 'yes'
+  const isAttending = formState.is_attending
 
-  const mainGuest = guestList.find((guest) => guest.name === name.toLowerCase())
+  const mainGuest = guestList.find(
+    (guest) => guest.name === formState.name.toLowerCase()
+  )
   const guestFound = mainGuest !== undefined
 
-  useEffect(() => {
-    setGuests([])
-    setRsvp(null)
-  }, [name])
   useEffect(() => {
     if (mainGuest) {
       const additionalGuests: Guest[] =
@@ -75,6 +120,20 @@ export const RSVPForm = () => {
     }
   }, [mainGuest])
 
+  const handleSubmit = () => {
+    submitFormData({
+      name: formState.name,
+      guests: JSON.stringify(formState.guests),
+      number_of_guests: formState.number_of_guests,
+      is_attending: formState.is_attending ?? false,
+      welcome_dinner: formState.welcome_dinner ?? false,
+      saturday_brunch: formState.saturday_brunch ?? false,
+      food_restrictions: formState.food_restrictions ?? false,
+      need_transportation: formState.need_transportation ?? false,
+      notes: formState.notes,
+    })
+  }
+
   return (
     <div>
       <div className="grid gap-6 py-4">
@@ -84,8 +143,13 @@ export const RSVPForm = () => {
           </Label>
           <Input
             id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value.toLowerCase())}
+            value={formState.name}
+            onChange={(e) =>
+              setFormState({
+                ...initialFormState,
+                name: e.target.value.toLowerCase(),
+              })
+            }
             className="col-span-3 capitalize"
             placeholder="First & Last name"
           />
@@ -95,7 +159,14 @@ export const RSVPForm = () => {
             <Label htmlFor="wedding_rsvp" className="text-right">
               Are you able to attend?
             </Label>
-            <Select onValueChange={setRsvp}>
+            <Select
+              onValueChange={(value: 'yes' | 'no') => {
+                setFormState((prev) => ({
+                  ...prev,
+                  is_attending: value === 'yes',
+                }))
+              }}
+            >
               <SelectTrigger className="col-span-3">
                 <SelectValue />
               </SelectTrigger>
@@ -112,13 +183,13 @@ export const RSVPForm = () => {
         ) : null}
         {/* render error if invitation not found */}
         {!guestFound &&
-        name === debouncedName &&
+        formState.name === debouncedName &&
         debouncedName.includes(' ') ? (
           <Alert>
             <p className="flex flex-col">
               <span>
-                invitation for "<span className="font-bold">{name}</span>" not
-                found.
+                invitation for "
+                <span className="font-bold">{formState.name}</span>" not found.
               </span>
               <span>
                 If this is a mistake please send an email to{' '}
@@ -160,7 +231,7 @@ export const RSVPForm = () => {
                         })
                       }}
                       // Don't allow main guest to delete themselves
-                      disabled={guest.name === name}
+                      disabled={guest.name === formState.name}
                     />
                     <Select
                       value={guest.dietaryRestriction}
@@ -191,11 +262,11 @@ export const RSVPForm = () => {
                         </SelectItem>
                       </SelectContent>
                     </Select>
-                    {guest.name !== name ? (
+                    {guest.name !== formState.name ? (
                       <Button
                         variant="outline"
                         className="col-span-1 p-0 text-black"
-                        disabled={guest.name === name}
+                        disabled={guest.name === formState.name}
                         onClick={() => {
                           setGuests((prev) =>
                             prev.filter((_, i) => i !== index)
@@ -230,25 +301,39 @@ export const RSVPForm = () => {
                 ) : null}
               </div>,
               <div
-                key="additional_guests"
+                key="optional_activities"
                 className="flex flex-col items-start gap-4"
               >
-                <Label htmlFor="thursday_dinner" className="text-right">
-                  Optional activities
-                </Label>
+                <Label className="text-right">Optional activities</Label>
                 <div className="flex items-center gap-2">
-                  <Checkbox id="thursday_dinner" />
+                  <Checkbox
+                    id="welcome_dinner"
+                    onCheckedChange={(value: boolean) => {
+                      setFormState((prev) => ({
+                        ...prev,
+                        welcome_dinner: value,
+                      }))
+                    }}
+                  />
                   <Label
-                    htmlFor="thursday_dinner"
+                    htmlFor="welcome_dinner"
                     className="text-right font-normal"
                   >
                     Attending the optional Thursday dinner
                   </Label>
                 </div>
                 <div className="flex items-center gap-2 ">
-                  <Checkbox id="sunday_brunch" />
+                  <Checkbox
+                    id="saturday_brunch"
+                    onCheckedChange={(value: boolean) => {
+                      setFormState((prev) => ({
+                        ...prev,
+                        saturday_brunch: value,
+                      }))
+                    }}
+                  />
                   <Label
-                    htmlFor="sunday_brunch"
+                    htmlFor="saturday_brunch"
                     className="text-right font-normal"
                   >
                     Attending the optional Saturday brunch
@@ -256,7 +341,33 @@ export const RSVPForm = () => {
                 </div>
               </div>,
               <div
-                key="additional_guests"
+                key="transportation"
+                className="flex flex-col items-start gap-4"
+              >
+                <Label className="text-right">
+                  Do you need transportation from Copenhagen to and from
+                  Herthadalen?
+                </Label>
+                <div className="flex items-center gap-2">
+                  <Checkbox
+                    id="need_transportation"
+                    onCheckedChange={(value: boolean) => {
+                      setFormState((prev) => ({
+                        ...prev,
+                        need_transportation: value,
+                      }))
+                    }}
+                  />
+                  <Label
+                    htmlFor="need_transportation"
+                    className="text-right font-normal"
+                  >
+                    Yes, we need transportation
+                  </Label>
+                </div>
+              </div>,
+              <div
+                key="other_notes"
                 className="flex flex-col items-start gap-4"
               >
                 <Label htmlFor="thursday_dinner" className="text-right">
@@ -268,7 +379,9 @@ export const RSVPForm = () => {
           : null}
       </div>
       <DialogFooter>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" onClick={handleSubmit}>
+          Submit
+        </Button>
       </DialogFooter>
     </div>
   )
