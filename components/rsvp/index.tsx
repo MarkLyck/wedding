@@ -1,5 +1,9 @@
 'use client'
 
+import { useMutation } from '@tanstack/react-query'
+import axios from 'axios'
+import { cva } from 'class-variance-authority'
+
 import {
   Dialog,
   DialogContent,
@@ -8,10 +12,62 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { useToast } from '@/hooks/use-toast'
 
 import { RSVPForm } from './form'
+import type { SubmitData } from './form'
+import { Success } from './success'
+
+const AIRTABLE_API_KEY =
+  'pat9RxLTubLn628rL.c4dc6feeec3a99abdc8cd996e884df1eb6e474b75e7777e552227098cd0a83d2'
+
+const createGuest = async (data: SubmitData) => {
+  return await axios.post(
+    'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201',
+    {
+      records: [
+        {
+          fields: data,
+        },
+      ],
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    }
+  )
+}
+
+const dialogContentStyles = cva('', {
+  variants: {
+    isSuccess: {
+      true: 'sm:max-w-[400px]',
+      false: 'sm:max-w-[600px]',
+    },
+  },
+})
 
 export function RSVPDialog() {
+  const { toast } = useToast()
+  const {
+    mutate,
+    data: response,
+    isLoading,
+    isSuccess,
+  } = useMutation({
+    mutationKey: ['create-guest'],
+    mutationFn: createGuest,
+    onError: () => {
+      toast({
+        variant: 'destructive',
+        title: 'Error: Submission failed :(',
+        description: 'please try again or contact hello@marklyck.com',
+      })
+    },
+  })
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -19,14 +75,24 @@ export function RSVPDialog() {
           RSVP
         </a>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px]">
-        <DialogHeader>
-          <DialogTitle>RSVP</DialogTitle>
-          <DialogDescription>
-            Please RSVP latest by May 1st, 2023, using the form below.
-          </DialogDescription>
-        </DialogHeader>
-        <RSVPForm />
+      <DialogContent className={dialogContentStyles({ isSuccess })}>
+        {isSuccess ? (
+          <Success
+            isAttending={
+              response?.data?.records?.[0]?.fields?.is_attending ?? false
+            }
+          />
+        ) : (
+          <>
+            <DialogHeader>
+              <DialogTitle>RSVP</DialogTitle>
+              <DialogDescription>
+                Please RSVP latest by May 1st, 2023, using the form below.
+              </DialogDescription>
+            </DialogHeader>
+            <RSVPForm submit={mutate} isLoading={isLoading} />
+          </>
+        )}
       </DialogContent>
     </Dialog>
   )

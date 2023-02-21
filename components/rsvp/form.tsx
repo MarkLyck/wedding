@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-import { useMutation } from '@tanstack/react-query'
 import { useDebounce } from 'ahooks'
 import { Plus, X } from 'lucide-react'
 
@@ -36,21 +35,6 @@ type FormState = {
   notes: string
 }
 
-type SubmitData = {
-  name: string
-  guests: string
-  number_of_guests: number
-  is_attending: boolean
-  welcome_dinner: boolean
-  saturday_brunch: boolean
-  food_restrictions: boolean
-  need_transportation: boolean
-  notes: string
-}
-
-const AIRTABLE_API_KEY =
-  'pat9RxLTubLn628rL.c4dc6feeec3a99abdc8cd996e884df1eb6e474b75e7777e552227098cd0a83d2'
-
 // const getGuests = async () => {
 //   return await fetch(
 //     'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201?maxRecords=3&view=Grid%20view',
@@ -62,23 +46,6 @@ const AIRTABLE_API_KEY =
 //     }
 //   )
 // }
-
-const createGuest = async (data: SubmitData) => {
-  return fetch('https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      records: [
-        {
-          fields: data,
-        },
-      ],
-    }),
-  })
-}
 
 const initialFormState = {
   name: '',
@@ -92,13 +59,25 @@ const initialFormState = {
   notes: '',
 }
 
-export const RSVPForm = () => {
-  const { mutate: submitFormData } = useMutation({
-    mutationKey: ['create-guest'],
-    mutationFn: createGuest,
-  })
+export type SubmitData = {
+  name: string
+  guests: string
+  number_of_guests: number
+  is_attending: boolean
+  welcome_dinner: boolean
+  saturday_brunch: boolean
+  food_restrictions: boolean
+  need_transportation: boolean
+  notes: string
+}
+
+type RSVPFormProps = {
+  submit: (data: SubmitData) => void
+  isLoading: boolean
+}
+
+export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
   const [formState, setFormState] = useState<FormState>(initialFormState)
-  const [guests, setGuests] = useState<Guest[]>([])
   const debouncedName = useDebounce(formState.name, { wait: 1000 })
 
   const isAttending = formState.is_attending
@@ -113,17 +92,32 @@ export const RSVPForm = () => {
       const additionalGuests: Guest[] =
         mainGuest.linkedGuests?.map((name) => ({
           name,
-          dietaryRestriction: 'none',
+          foodRestriction: 'none',
         })) ?? []
 
-      setGuests([mainGuest, ...additionalGuests])
+      setFormState((prev) => ({
+        ...prev,
+        number_of_guests: additionalGuests.length + 1,
+        guests: [
+          {
+            name: mainGuest.name,
+            foodRestriction: 'none',
+          },
+          ...additionalGuests,
+        ],
+      }))
     }
   }, [mainGuest])
 
   const handleSubmit = () => {
-    submitFormData({
+    submit({
       name: formState.name,
-      guests: JSON.stringify(formState.guests),
+      guests: JSON.stringify(
+        formState.guests.map((guest) => ({
+          name: guest.name,
+          foodRestriction: guest.foodRestriction,
+        }))
+      ),
       number_of_guests: formState.number_of_guests,
       is_attending: formState.is_attending ?? false,
       welcome_dinner: formState.welcome_dinner ?? false,
@@ -164,6 +158,7 @@ export const RSVPForm = () => {
                 setFormState((prev) => ({
                   ...prev,
                   is_attending: value === 'yes',
+                  number_of_guests: value === 'yes' ? prev.number_of_guests : 0,
                 }))
               }}
             >
@@ -213,39 +208,37 @@ export const RSVPForm = () => {
                 <Label htmlFor="wedding_rsvp" className="text-right">
                   Who's attending?
                 </Label>
-                {guests.map((guest, index) => (
+                {formState.guests.map((guest, index) => (
                   <div key={index} className="grid w-full grid-cols-8 gap-4 ">
                     <Input
                       className="col-span-4 capitalize"
                       value={guest.name}
                       placeholder="Name"
                       onChange={(e) => {
-                        setGuests((prev) => {
-                          const newGuests = [...prev]
+                        setFormState((prev) => {
+                          const newGuests = [...prev.guests]
                           newGuests[index] = {
-                            ...prev[index],
+                            ...prev.guests[index],
                             name: e.target.value.toLowerCase(),
                           }
-
-                          return newGuests
+                          return { ...prev, guests: newGuests }
                         })
                       }}
                       // Don't allow main guest to delete themselves
                       disabled={guest.name === formState.name}
                     />
                     <Select
-                      value={guest.dietaryRestriction}
+                      value={guest.foodRestriction}
                       onValueChange={(
                         value: 'none' | 'vegetarian' | 'allergy'
                       ) => {
-                        setGuests((prev) => {
-                          const newGuests = [...prev]
+                        setFormState((prev) => {
+                          const newGuests = [...prev.guests]
                           newGuests[index] = {
-                            ...prev[index],
-                            dietaryRestriction: value,
+                            ...prev.guests[index],
+                            foodRestriction: value,
                           }
-
-                          return newGuests
+                          return { ...prev, guests: newGuests }
                         })
                       }}
                     >
@@ -268,9 +261,12 @@ export const RSVPForm = () => {
                         className="col-span-1 p-0 text-black"
                         disabled={guest.name === formState.name}
                         onClick={() => {
-                          setGuests((prev) =>
-                            prev.filter((_, i) => i !== index)
-                          )
+                          setFormState((prev) => {
+                            const newGuests = prev.guests.filter(
+                              (_, i) => i !== index
+                            )
+                            return { ...prev, guests: newGuests }
+                          })
                         }}
                       >
                         <X className="h-4 text-black" />
@@ -279,26 +275,55 @@ export const RSVPForm = () => {
                   </div>
                 ))}
                 {mainGuest?.additionalGuests &&
-                guests.length < mainGuest?.additionalGuests + 1 ? (
+                formState.guests.length < mainGuest?.additionalGuests + 1 ? (
                   <Button
                     variant="outline"
                     className="w-full"
-                    onClick={() =>
-                      setGuests((prev) => [
+                    onClick={() => {
+                      setFormState((prev) => ({
                         ...prev,
-                        {
-                          name: '',
-                          linkedGuests: [],
-                          additionalGuests: 0,
-                          dietaryRestriction: 'none',
-                        },
-                      ])
-                    }
+                        guests: [
+                          ...prev.guests,
+                          {
+                            name: '',
+                            linkedGuests: [],
+                            additionalGuests: 0,
+                            foodRestriction: 'none',
+                          },
+                        ],
+                      }))
+                    }}
                   >
                     <Plus className="mr-1 h-4 w-4" />
                     Add guest
                   </Button>
                 ) : null}
+              </div>,
+              <div
+                key="transportation"
+                className="flex flex-col items-start gap-4"
+              >
+                <Label className="text-right">
+                  Do you need transportation from Copenhagen to and from the
+                  venue?
+                </Label>
+                <div className="flex items-center gap-2">
+                  <Checkbox
+                    id="need_transportation"
+                    onCheckedChange={(value: boolean) => {
+                      setFormState((prev) => ({
+                        ...prev,
+                        need_transportation: value,
+                      }))
+                    }}
+                  />
+                  <Label
+                    htmlFor="need_transportation"
+                    className="text-right font-normal"
+                  >
+                    Yes, we need transportation
+                  </Label>
+                </div>
               </div>,
               <div
                 key="optional_activities"
@@ -341,32 +366,6 @@ export const RSVPForm = () => {
                 </div>
               </div>,
               <div
-                key="transportation"
-                className="flex flex-col items-start gap-4"
-              >
-                <Label className="text-right">
-                  Do you need transportation from Copenhagen to and from
-                  Herthadalen?
-                </Label>
-                <div className="flex items-center gap-2">
-                  <Checkbox
-                    id="need_transportation"
-                    onCheckedChange={(value: boolean) => {
-                      setFormState((prev) => ({
-                        ...prev,
-                        need_transportation: value,
-                      }))
-                    }}
-                  />
-                  <Label
-                    htmlFor="need_transportation"
-                    className="text-right font-normal"
-                  >
-                    Yes, we need transportation
-                  </Label>
-                </div>
-              </div>,
-              <div
                 key="other_notes"
                 className="flex flex-col items-start gap-4"
               >
@@ -379,7 +378,11 @@ export const RSVPForm = () => {
           : null}
       </div>
       <DialogFooter>
-        <Button type="submit" onClick={handleSubmit}>
+        <Button
+          type="submit"
+          onClick={handleSubmit}
+          disabled={!guestFound || isLoading || formState.is_attending === null}
+        >
           Submit
         </Button>
       </DialogFooter>
