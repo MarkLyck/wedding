@@ -238,7 +238,16 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                             ...prev.guests[index],
                             foodRestriction: value,
                           }
-                          return { ...prev, guests: newGuests }
+
+                          const anyGuestHasFoodRestriction = newGuests.some(
+                            (guest) => guest.foodRestriction !== 'none'
+                          )
+
+                          return {
+                            ...prev,
+                            food_restrictions: anyGuestHasFoodRestriction,
+                            guests: newGuests,
+                          }
                         })
                       }}
                     >
@@ -250,7 +259,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                           No food restrictions
                         </SelectItem>
                         <SelectItem value="vegetarian">Vegetarian</SelectItem>
-                        <SelectItem value="allergies" className="text-red-600">
+                        <SelectItem value="allergy" className="text-red-600">
                           Food Allergies
                         </SelectItem>
                       </SelectContent>
@@ -372,7 +381,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 <Label htmlFor="thursday_dinner" className="text-right">
                   Other notes
                 </Label>
-                <Textarea placeholder="food allergies, comments or anything else you think we should know." />
+                <Textarea placeholder="dietary restrictions, comments, or anything else you think we should know." />
               </div>,
             ]
           : null}
