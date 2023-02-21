@@ -381,7 +381,15 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 <Label htmlFor="thursday_dinner" className="text-right">
                   Other notes
                 </Label>
-                <Textarea placeholder="dietary restrictions, comments, or anything else you think we should know." />
+                <Textarea
+                  placeholder="dietary restrictions, comments, or anything else you think we should know."
+                  onChange={(e) => {
+                    setFormState((prev) => ({
+                      ...prev,
+                      notes: e.target.value,
+                    }))
+                  }}
+                />
               </div>,
             ]
           : null}
