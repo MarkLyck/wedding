@@ -12,3 +12,4 @@ package-lock.json
 public
 CHANGELOG.md
 .yarn
+.next

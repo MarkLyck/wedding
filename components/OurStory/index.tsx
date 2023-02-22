@@ -10,7 +10,7 @@ export const OurStory = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud."
       />
       <div className="relative flex flex-col gap-8 p-8">
-        <div className="absolute top-4 bottom-4 left-1/2 w-0.5 bg-zinc-300" />
+        <div className="absolute inset-y-4 left-1/2 w-0.5 bg-zinc-300" />
         <Section
           title="How we met"
           date="06. 02. 2019"

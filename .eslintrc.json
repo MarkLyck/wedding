@@ -9,10 +9,10 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier", "tailwindcss"],
+  "plugins": ["react", "@typescript-eslint", "tailwindcss", "prettier"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",

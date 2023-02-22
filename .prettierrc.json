@@ -11,17 +11,14 @@
     "",
     "^types$",
     "^@/types/(.*)$",
-    "^@/config/(.*)$",
-    "^@/lib/(.*)$",
-    "^@/components/(.*)$",
-    "^@/styles/(.*)$",
+    "^@/(.*)$",
     "^[./]"
   ],
-  "importOrderSeparation": false,
+  "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderBuiltinModulesToTop": true,
   "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
   "importOrderMergeDuplicateImports": true,
-  "importOrderCombineTypeAndValueImports": true,
+  "importOrderCombineTypeAndValueImports": false,
   "plugins": ["@ianvs/prettier-plugin-sort-imports"]
 }

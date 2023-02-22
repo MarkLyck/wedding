@@ -1,5 +1,6 @@
-import { cva } from 'class-variance-authority'
 import Image from 'next/image'
+
+import { cva } from 'class-variance-authority'
 
 import { cormorantGaramond } from '@/lib/fonts'
 
@@ -47,7 +48,13 @@ const descriptionStyles = cva(['max-w-sm'], {
   },
 })
 
-export const Section = ({ title, date, imageSrc, description, direction }: SectionProps) => (
+export const Section = ({
+  title,
+  date,
+  imageSrc,
+  description,
+  direction,
+}: SectionProps) => (
   <section className={sectionStyles({ direction })}>
     <div className={imageStyles({ direction })}>
       <Image

@@ -1,48 +1,98 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
+import { useMutation } from '@tanstack/react-query'
+import axios from 'axios'
+import { cva } from 'class-variance-authority'
+
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+import { useToast } from '@/hooks/use-toast'
+
+import { RSVPForm } from './form'
+import type { SubmitData } from './form'
+import { Success } from './success'
+
+const AIRTABLE_API_KEY =
+  'pat9RxLTubLn628rL.c4dc6feeec3a99abdc8cd996e884df1eb6e474b75e7777e552227098cd0a83d2'
+
+const createGuest = async (data: SubmitData) => {
+  return await axios.post(
+    'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201',
+    {
+      records: [
+        {
+          fields: data,
+        },
+      ],
+    },
+    {
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    }
+  )
+}
+
+const dialogContentStyles = cva('', {
+  variants: {
+    isSuccess: {
+      true: 'sm:max-w-[400px]',
+      false: 'sm:max-w-[600px]',
+    },
+  },
+})
 
 export function RSVPDialog() {
+  const { toast } = useToast()
+  const {
+    mutate,
+    data: response,
+    isLoading,
+    isSuccess,
+  } = useMutation({
+    mutationKey: ['create-guest'],
+    mutationFn: createGuest,
+    onError: () => {
+      toast({
+        variant: 'destructive',
+        title: 'Error: Submission failed :(',
+        description: 'please try again or contact hello@marklyck.com',
+      })
+    },
+  })
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="link">RSVP</Button>
+        <a className="after:content-[' '] before👈 relative cursor-pointer px-4 py-2 text-zinc-500 transition-colors duration-200 after:absolute after:top-1/2 after:left-0 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 after:bg-neutral-600 hover:text-black">
+          RSVP
+        </a>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>RSVP</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
+      <DialogContent className={dialogContentStyles({ isSuccess })}>
+        {isSuccess ? (
+          <Success
+            isAttending={
+              response?.data?.records?.[0]?.fields?.is_attending ?? false
+            }
+          />
+        ) : (
+          <>
+            <DialogHeader>
+              <DialogTitle>RSVP</DialogTitle>
+              <DialogDescription>
+                Please RSVP latest by May 1st, 2023, using the form below.
+              </DialogDescription>
+            </DialogHeader>
+            <RSVPForm submit={mutate} isLoading={isLoading} />
+          </>
+        )}
       </DialogContent>
     </Dialog>
   )
