@@ -1,10 +1,14 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import createIntlMiddleware from 'next-intl/middleware'
 
-export function middleware(request: NextRequest) {
-  return NextResponse.redirect(new URL('/en', request.url))
-}
+export default createIntlMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'dk'],
+
+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
+  defaultLocale: 'en',
+})
 
 export const config = {
-  matcher: '/',
+  // Skip all paths that aren't pages that you'd like to internationalize
+  matcher: ['/((?!api|_next|favicon.ico|assets).*)'],
 }
