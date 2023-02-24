@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "home": "Hjem",
+    "locations": "Lokationer"
+  },
+  "home": {
+    "hero": {
+      "title": "Lad os fejre!",
+      "date": "Fredag d. 2 juni, 2023 nær København"
+    }
+  },
+  "rsvp_form": {
+    "rsvp": "RSVP",
+    "rsvp_latest_by": "RSVP senest den 1. maj, 2023",
+    "first_and_last_name": "Fornavn & efternavn",
+    "are_you_attending": "Kan du komme til brylluppet?",
+    "yes_im_coming_to_the_wedding": "Ja, jeg kommer til brylluppet",
+    "no_i_cant_make_it": "Nej, jeg kan ikke komme",
+    "who_is_attending": "Hvem kommer med?",
+    "no_food_restrictions": "Ingen madrestriktioner",
+    "vegetarian": "Vegetar",
+    "food_allergies": "Madallergi",
+    "add_a_guest": "Tilføj en gæst",
+    "do_you_need_transportation": "Har du brug for transport fra Kbh, til og fra Herthadalen?",
+    "yes_need_transportation": "Ja, vi har brug for transport",
+    "optional_activities": "Valgfrie aktiviteter",
+    "attending_optional_thursday_dinner": "Vi kommer til den valgfrie torsdags-aftensmad",
+    "attending_optional_saturday_brunch": "Vi kommer til den valgfrie lørdags-brunch",
+    "other_notes": "Andre bemærkninger",
+    "other_notes_placeholder": "Madallergi, bemærkninger, eller andet du synes vi skal vide.",
+    "submit": "Send RSVP",
+    "name": "Navn",
+    "invitation_for": "Invitation for",
+    "if_mistake": "Hvis dette er en fejl, kontakt os venligst på",
+    "not_found": "kunne ikke findes"
+  }
+}

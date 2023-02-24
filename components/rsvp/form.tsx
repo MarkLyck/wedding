@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { useDebounce } from 'ahooks'
 import { Plus, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -77,6 +78,7 @@ type RSVPFormProps = {
 }
 
 export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
+  const t = useTranslations('rsvp_form')
   const [formState, setFormState] = useState<FormState>(initialFormState)
   const debouncedName = useDebounce(formState.name, { wait: 1000 })
 
@@ -133,7 +135,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
       <div className="grid gap-6 py-4">
         <div className="flex flex-col items-start gap-4">
           <Label htmlFor="name" className="text-right">
-            First and Last name
+            {t('first_and_last_name')}
           </Label>
           <Input
             id="name"
@@ -145,13 +147,13 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
               })
             }
             className="col-span-3 capitalize"
-            placeholder="First & Last name"
+            placeholder={t('first_and_last_name')}
           />
         </div>
         {mainGuest ? (
           <div className="flex flex-col items-start gap-4">
             <Label htmlFor="wedding_rsvp" className="text-right">
-              Are you able to attend?
+              {t('are_you_attending')}
             </Label>
             <Select
               onValueChange={(value: 'yes' | 'no') => {
@@ -167,10 +169,10 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="yes">
-                  Yes, I am coming to the wedding.
+                  {t('yes_im_coming_to_the_wedding')}
                 </SelectItem>
                 <SelectItem value="no" className="text-red-600">
-                  No, I can't make it.
+                  {t('no_i_cant_make_it')}
                 </SelectItem>
               </SelectContent>
             </Select>
@@ -183,11 +185,12 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
           <Alert>
             <p className="flex flex-col">
               <span>
-                invitation for "
-                <span className="font-bold">{formState.name}</span>" not found.
+                {t('invitation_for')}"
+                <span className="font-bold">{formState.name}</span>"{' '}
+                {t('not_found')}.
               </span>
               <span>
-                If this is a mistake please send an email to{' '}
+                {t('if_mistake')}{' '}
                 <a
                   className="inline text-zinc-800 underline"
                   href="mailto:hello@marklyck.com"
@@ -206,14 +209,14 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 className="flex flex-col items-start gap-4"
               >
                 <Label htmlFor="wedding_rsvp" className="text-right">
-                  Who's attending?
+                  {t('who_is_attending')}
                 </Label>
                 {formState.guests.map((guest, index) => (
                   <div key={index} className="grid w-full grid-cols-8 gap-4 ">
                     <Input
                       className="col-span-4 capitalize"
                       value={guest.name}
-                      placeholder="Name"
+                      placeholder={t('name')}
                       onChange={(e) => {
                         setFormState((prev) => {
                           const newGuests = [...prev.guests]
@@ -256,11 +259,13 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="none">
-                          No food restrictions
+                          {t('no_food_restrictions')}
                         </SelectItem>
-                        <SelectItem value="vegetarian">Vegetarian</SelectItem>
+                        <SelectItem value="vegetarian">
+                          {t('vegetarian')}
+                        </SelectItem>
                         <SelectItem value="allergy" className="text-red-600">
-                          Food Allergies
+                          {t('food_allergies')}
                         </SelectItem>
                       </SelectContent>
                     </Select>
@@ -304,7 +309,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                     }}
                   >
                     <Plus className="mr-1 h-4 w-4" />
-                    Add guest
+                    {t('add_a_guest')}
                   </Button>
                 ) : null}
               </div>,
@@ -313,8 +318,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 className="flex flex-col items-start gap-4"
               >
                 <Label className="text-right">
-                  Do you need transportation from Copenhagen to and from the
-                  venue?
+                  {t('do_you_need_transportation')}
                 </Label>
                 <div className="flex items-center gap-2">
                   <Checkbox
@@ -330,7 +334,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                     htmlFor="need_transportation"
                     className="text-right font-normal"
                   >
-                    Yes, we need transportation
+                    {t('yes_need_transportation')}
                   </Label>
                 </div>
               </div>,
@@ -338,7 +342,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 key="optional_activities"
                 className="flex flex-col items-start gap-4"
               >
-                <Label className="text-right">Optional activities</Label>
+                <Label className="text-right">{t('optional_activities')}</Label>
                 <div className="flex items-center gap-2">
                   <Checkbox
                     id="welcome_dinner"
@@ -353,7 +357,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                     htmlFor="welcome_dinner"
                     className="text-right font-normal"
                   >
-                    Attending the optional Thursday dinner
+                    {t('attending_optional_thursday_dinner')}
                   </Label>
                 </div>
                 <div className="flex items-center gap-2 ">
@@ -370,7 +374,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                     htmlFor="saturday_brunch"
                     className="text-right font-normal"
                   >
-                    Attending the optional Saturday brunch
+                    {t('attending_optional_saturday_brunch')}
                   </Label>
                 </div>
               </div>,
@@ -379,7 +383,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 className="flex flex-col items-start gap-4"
               >
                 <Label htmlFor="thursday_dinner" className="text-right">
-                  Other notes
+                  {t('other_notes')}
                 </Label>
                 <Textarea
                   placeholder="dietary restrictions, comments, or anything else you think we should know."
@@ -400,7 +404,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
           onClick={handleSubmit}
           disabled={!guestFound || isLoading || formState.is_attending === null}
         >
-          Submit
+          {t('submit')}
         </Button>
       </DialogFooter>
     </div>

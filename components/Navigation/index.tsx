@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import { RSVPDialog } from '@/components/rsvp'
+import { useTranslations } from 'next-intl'
 
 const NavLink = ({
   href,
@@ -21,21 +21,20 @@ const NavLink = ({
   </Link>
 )
 
-export const Navigation = () => {
+export const Navigation = ({ children }: { children: any }) => {
+  const t = useTranslations('navigation')
   return (
     <div className="flex w-full  justify-center pt-16">
       <ul className="flex items-center">
         <li>
           <NavLink href="/" className="after:w-0">
-            HOME
+            {t('home')}
           </NavLink>
         </li>
         <li>
-          <NavLink href="/locations">LOCATIONS</NavLink>
+          <NavLink href="/locations">{t('locations')}</NavLink>
         </li>
-        <li>
-          <RSVPDialog />
-        </li>
+        <li>{children}</li>
       </ul>
     </div>
   )
