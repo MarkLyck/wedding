@@ -2,9 +2,10 @@ import React from 'react'
 
 import { notFound } from 'next/navigation'
 
-import { useLocale } from 'next-intl'
+import { NextIntlClientProvider, useLocale } from 'next-intl'
 
 import { inter } from '@/lib/fonts'
+import { getMessages } from '@/lib/locale'
 
 import '@/styles/globals.css'
 
@@ -17,6 +18,8 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children, params }: RootLayoutProps) => {
   const locale = useLocale()
+  const messages = getMessages(locale)
+  console.log('🔈 ~ messages:', messages)
 
   if (params.locale !== locale) {
     notFound()
@@ -28,7 +31,9 @@ const RootLayout = ({ children, params }: RootLayoutProps) => {
         <title>Mark & Grace wedding</title>
       </head>
       <body>
-        <Providers>{children}</Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>{children}</Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

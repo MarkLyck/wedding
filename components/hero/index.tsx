@@ -1,26 +1,18 @@
-import pick from 'lodash/pick'
-import { NextIntlClientProvider, useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 import { Navigation } from '@/components/Navigation'
 import { RSVP } from '@/components/rsvp'
 import { cormorantGaramond } from '@/lib/fonts'
 
-export const Hero = async () => {
+export const Hero = () => {
   const t = useTranslations('home')
-  const locale = useLocale()
-  const messages = (await import(`../../lib/locale/${locale}.json`)).default
 
   return (
     <div className="h-screen bg-white p-8">
       <div className={`relative h-full bg-hero bg-cover bg-top`}>
-        <NextIntlClientProvider
-          locale={locale}
-          messages={pick(messages, 'navigation')}
-        >
-          <Navigation>
-            <RSVP />
-          </Navigation>
-        </NextIntlClientProvider>
+        <Navigation>
+          <RSVP />
+        </Navigation>
         <div
           className={`${cormorantGaramond.className} mt-40 flex flex-col items-center justify-center`}
         >
