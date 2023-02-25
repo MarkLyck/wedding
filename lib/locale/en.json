@@ -1,4 +1,7 @@
 {
+  "common": {
+    "language": "Dansk"
+  },
   "navigation": {
     "home": "Home",
     "locations": "Locations"
@@ -8,6 +11,12 @@
       "title": "Let's celebrate!",
       "date": "Friday June 2nd, 2023 near Copenhagen"
     }
+  },
+  "our_story": {
+    "title": "A short timeline of our story",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
+    "how_we_met_title": "How we met",
+    "how_we_met_description": "We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar."
   },
   "rsvp_form": {
     "rsvp": "RSVP",
