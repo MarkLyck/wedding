@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/navigation'
+import { Navigation } from '@/components/Navigation'
 import { Schedule } from '@/components/schedule'
 
 const Page = () => (

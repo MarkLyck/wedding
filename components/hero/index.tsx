@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { Navigation } from '@/components/navigation'
+import { Navigation } from '@/components/Navigation'
 import { cormorantGaramond } from '@/lib/fonts'
 import { LocaleButton } from '@/ui/LocaleButton'
 

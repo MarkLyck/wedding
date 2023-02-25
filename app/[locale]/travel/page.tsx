@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/navigation'
+import { Navigation } from '@/components/Navigation'
 
 const Page = () => (
   <div className="space-y-6">
