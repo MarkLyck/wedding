@@ -1,8 +1,8 @@
-import { Hero } from '@/components/hero'
+import { Navigation } from '@/components/navigation'
 
 const Page = () => (
   <div className="space-y-6">
-    <Hero />
+    <Navigation />
   </div>
 )
 

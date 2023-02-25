@@ -4,7 +4,10 @@
   },
   "navigation": {
     "home": "Hjem",
-    "locations": "Lokationer"
+    "schedule": "Tidsplan",
+    "travel": "Rejse",
+    "registry": "Gaveidéer",
+    "faq": "Spørgsmål"
   },
   "home": {
     "hero": {
@@ -14,12 +17,19 @@
   },
   "our_story": {
     "title": "En kort tidslinje af vores historie",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
+    "subtitle": "TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
     "how_we_met_title": "Hvordan vi mødtes",
-    "how_we_met_description": "We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar."
+    "how_we_met_description": "TODO: We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar."
+  },
+  "schedule": {
+    "description": "TODO: Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
+    "thursday_date": "TORSDAY, 1 JUNI, 2023",
+    "friday_date": "FREDAG, 2 JUNI, 2023",
+    "saturday_date": "LØRDAG, 3 JUNI, 2023",
+    "sunday_date": "SØNDAG, 4 JUNI, 2023"
   },
   "rsvp_form": {
-    "rsvp": "RSVP",
+    "rsvp": "S.U.",
     "rsvp_latest_by": "RSVP senest den 1. maj, 2023",
     "first_and_last_name": "Fornavn & efternavn",
     "are_you_attending": "Kan du komme til brylluppet?",

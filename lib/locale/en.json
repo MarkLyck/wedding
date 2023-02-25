@@ -4,7 +4,10 @@
   },
   "navigation": {
     "home": "Home",
-    "locations": "Locations"
+    "schedule": "schedule",
+    "travel": "travel",
+    "registry": "registry",
+    "faq": "faq"
   },
   "home": {
     "hero": {
@@ -14,9 +17,16 @@
   },
   "our_story": {
     "title": "A short timeline of our story",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
+    "subtitle": "TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
     "how_we_met_title": "How we met",
     "how_we_met_description": "We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar."
+  },
+  "schedule": {
+    "description": "Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
+    "thursday_date": "THURSDAY, JUNE 1, 2023",
+    "friday_date": "FRIDAY, JUNE 2, 2023",
+    "saturday_date": "SATURDAY, JUNE 3, 2023",
+    "sunday_date": "SUNDAY, JUNE 4, 2023"
   },
   "rsvp_form": {
     "rsvp": "RSVP",
