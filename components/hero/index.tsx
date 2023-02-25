@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl'
 
 import { Navigation } from '@/components/Navigation'
-import { RSVP } from '@/components/rsvp'
 import { cormorantGaramond } from '@/lib/fonts'
 import { LocaleButton } from '@/ui/LocaleButton'
 
@@ -11,9 +10,7 @@ export const Hero = () => {
   return (
     <div className="h-screen bg-white p-8">
       <div className={`relative h-full bg-hero bg-cover bg-top`}>
-        <Navigation>
-          <RSVP />
-        </Navigation>
+        <Navigation />
         <div className="absolute top-4 right-4">
           <LocaleButton />
         </div>

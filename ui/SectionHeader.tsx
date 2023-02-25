@@ -1,6 +1,8 @@
-import { Title } from '@/ui/Title'
-import { Description } from '@/ui/Description'
 import Image from 'next/image'
+
+import { Description } from '@/ui/Description'
+import { Title } from '@/ui/Title'
+
 import separator from '../public/images/ui/separator.png'
 
 type titleProps = {

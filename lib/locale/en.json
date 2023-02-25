@@ -4,7 +4,10 @@
   },
   "navigation": {
     "home": "Home",
-    "locations": "Locations"
+    "schedule": "schedule",
+    "travel": "travel",
+    "registry": "registry",
+    "faq": "faq"
   },
   "home": {
     "hero": {
@@ -14,9 +17,37 @@
   },
   "our_story": {
     "title": "A short timeline of our story",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
+    "subtitle": "TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
     "how_we_met_title": "How we met",
     "how_we_met_description": "We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar."
+  },
+  "schedule": {
+    "description": "Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
+    "welcome_event_date": "THURSDAY, JUNE 1, 2023",
+    "welcome_event_name": "Ofelia Plads & Restaurant",
+    "welcome_event_description": "TODO",
+    "welcome_event_address": "TODO",
+
+    "ceremony_date": "FRIDAY, JUNE 2, 2023",
+    "ceremony_name": "Allerslev kirke",
+    "ceremony_address": "Lejrevej 17, 4320 Lejre, Denmark",
+    "ceremony_description": "TODO",
+
+    "reception_name": "Restaurant Herthadalen",
+    "reception_address": "Slangealleen 1, 4320 Lejre, Denmark",
+    "reception_description": "TODO",
+
+    "saturday_event_date": "SATURDAY, JUNE 3, 2023",
+    "saturday_event_name": "Gro Spiseri",
+    "saturday_event_description": "TODO",
+    "saturday_event_address": "Æbeløgade 4, København Ø, 2100, Denmark",
+
+    "sunday_event_date": "SUNDAY, JUNE 4, 2023",
+    "sunday_event_name": "TODO",
+    "sunday_event_description": "TODO",
+    "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
+
+    "map": "map"
   },
   "rsvp_form": {
     "rsvp": "RSVP",
@@ -33,7 +64,7 @@
     "do_you_need_transportation": "Do you need transportation from Copenhagen to and from the venue?",
     "yes_need_transportation": "Yes, we need transportation",
     "optional_activities": "Optional activities",
-    "attending_optional_thursday_dinner": "Attending the optional Thursday dinner",
+    "attending_optional_welcome_dinner": "Attending the optional Thursday dinner",
     "attending_optional_saturday_brunch": "Attending the optional Saturday brunch",
     "other_notes": "Other notes",
     "other_notes_placeholder": "Dietary restrictions, comments, or anything else you want us to know.",
