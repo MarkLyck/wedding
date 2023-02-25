@@ -25,26 +25,26 @@
     "description": "Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
     "welcome_event_date": "THURSDAY, JUNE 1, 2023",
     "welcome_event_name": "Ofelia Plads & Restaurant",
-    "welcome_event_description": "TODO",
-    "welcome_event_address": "TODO",
+    "welcome_event_description": "Everybody is welcome to join us for the welcome event, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads to begin the 1-hour private canal tour of Copenhagen. The drop-off will be at the Restaurant where we will have a 3-course dinner and drinks!\n\nWelcome drinks (only)\nNo dress code.\n\nIf you arrive in Copenhagen early - which we highly recommend - please join us for drinks by the scenic canal! We will toast to a beautiful weekend and all those of you who don't know each other can get acquainted. You can stay as long as you like and there's a street-food market across the tiny bridge if you get hungry.\n\n**Please note that this event is weather permitting as it takes place outside and the weather in Copenhagen is very temperamental. This event is meant to be a casual gathering for people have a destination for their first few days in the city.",
+    "welcome_event_address": "Kvæsthusbroen 1, København, 1250, Denmark",
 
     "ceremony_date": "FRIDAY, JUNE 2, 2023",
     "ceremony_name": "Allerslev kirke",
     "ceremony_address": "Lejrevej 17, 4320 Lejre, Denmark",
-    "ceremony_description": "TODO",
+    "ceremony_description": "TODO: description",
 
     "reception_name": "Restaurant Herthadalen",
     "reception_address": "Slangealleen 1, 4320 Lejre, Denmark",
-    "reception_description": "TODO",
+    "reception_description": "A cocktail hour (and treasure hunt) will begin at 4:30 pm, so you may arrive at any point between then and when dinner starts at 6:00pm. Toasts, speeches, songs, games, parodies, quizzes and other major, micro-events are encouraged during or after the dinner. Please reach out to toast-master ___ with such.\n\nFollowing dinner, we will drink and play some fun games. Late night snacks will be provided!",
 
     "saturday_event_date": "SATURDAY, JUNE 3, 2023",
     "saturday_event_name": "Gro Spiseri",
-    "saturday_event_description": "TODO",
+    "saturday_event_description": "If you want to keep the party going, join us for a casual brunch and exchange contact information with all your new friends! \n\nWe welcome you to join us for a 3-course lunch on the rooftop greenhouse in Østerbro  on Saturday. Please enter into the yard and climb up the spiral stairs. The lunch will begin with a short tour of the rooftop urban farm. For those interested, join us on a tour of Copenhagen in the late afternoon.",
     "saturday_event_address": "Æbeløgade 4, København Ø, 2100, Denmark",
 
     "sunday_event_date": "SUNDAY, JUNE 4, 2023",
     "sunday_event_name": "TODO",
-    "sunday_event_description": "TODO",
+    "sunday_event_description": "If you are still in the city, we would love to continue the fun and spend an afternoon at the Harbour Bath sunbathing, drinking natural wine and grubbing on delicious seafood!",
     "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
 
     "map": "map"
