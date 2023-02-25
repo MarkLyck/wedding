@@ -19,7 +19,6 @@ type RootLayoutProps = {
 const RootLayout = ({ children, params }: RootLayoutProps) => {
   const locale = useLocale()
   const messages = getMessages(locale)
-  console.log('🔈 ~ messages:', messages)
 
   if (params.locale !== locale) {
     notFound()
