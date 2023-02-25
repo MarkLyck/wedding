@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl'
 
-import { Navigation } from '@/components/Navigation'
 import { cormorantGaramond } from '@/lib/fonts'
 import { LocaleButton } from '@/ui/LocaleButton'
 
@@ -10,12 +9,11 @@ export const Hero = () => {
   return (
     <div className="h-screen bg-white p-8">
       <div className={`relative h-full bg-hero bg-cover bg-top`}>
-        <Navigation />
         <div className="absolute top-4 right-4">
           <LocaleButton />
         </div>
         <div
-          className={`${cormorantGaramond.className} mt-40 flex flex-col items-center justify-center`}
+          className={`${cormorantGaramond.className} flex flex-col items-center justify-center pt-40`}
         >
           <h2 className="text-lg font-semibold text-black">
             {t('hero.title')}
