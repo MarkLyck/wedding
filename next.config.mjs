@@ -5,7 +5,7 @@ import withNextIntl from 'next-intl/plugin'
 //   './i18n.ts'
 // )
 
-export const nextConfig = withNextIntl('./i18n.ts')({
+export const nextConfig = withNextIntl('./lib/i18n.ts')({
   // Other Next.js configuration ...
   reactStrictMode: true,
   experimental: { appDir: true },

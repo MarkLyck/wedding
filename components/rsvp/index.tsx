@@ -3,6 +3,7 @@
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import { cva } from 'class-variance-authority'
+import { useTranslations } from 'next-intl'
 
 import {
   Dialog,
@@ -49,7 +50,8 @@ const dialogContentStyles = cva('', {
   },
 })
 
-export function RSVPDialog() {
+export function RSVP() {
+  const t = useTranslations('rsvp_form')
   const { toast } = useToast()
   const {
     mutate,
@@ -72,7 +74,7 @@ export function RSVPDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <a className="after:content-[' '] before👈 relative cursor-pointer px-4 py-2 text-zinc-500 transition-colors duration-200 after:absolute after:top-1/2 after:left-0 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 after:bg-neutral-600 hover:text-black">
-          RSVP
+          {t('rsvp')}
         </a>
       </DialogTrigger>
       <DialogContent className={dialogContentStyles({ isSuccess })}>
@@ -85,10 +87,8 @@ export function RSVPDialog() {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle>RSVP</DialogTitle>
-              <DialogDescription>
-                Please RSVP latest by May 1st, 2023, using the form below.
-              </DialogDescription>
+              <DialogTitle>{t('rsvp')}</DialogTitle>
+              <DialogDescription>{t('rsvp_latest_by')}</DialogDescription>
             </DialogHeader>
             <RSVPForm submit={mutate} isLoading={isLoading} />
           </>

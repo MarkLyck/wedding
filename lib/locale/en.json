@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "home": "Home",
+    "locations": "Locations"
+  },
+  "home": {
+    "hero": {
+      "title": "Let's celebrate!",
+      "date": "Friday June 2nd, 2023 near Copenhagen"
+    }
+  },
+  "rsvp_form": {
+    "rsvp": "RSVP",
+    "rsvp_latest_by": "Please RSVP latest by May 1st, 2023, using the form below.",
+    "first_and_last_name": "First & last name",
+    "are_you_attending": "Are you able to attend?",
+    "yes_im_coming_to_the_wedding": "Yes, I'm coming to the wedding",
+    "no_i_cant_make_it": "No, I can't make it",
+    "who_is_attending": "Who is attending?",
+    "no_food_restrictions": "No food restrictions",
+    "vegetarian": "Vegetarian",
+    "food_allergies": "Food allergies",
+    "add_a_guest": "Add a guest",
+    "do_you_need_transportation": "Do you need transportation from Copenhagen to and from the venue?",
+    "yes_need_transportation": "Yes, we need transportation",
+    "optional_activities": "Optional activities",
+    "attending_optional_thursday_dinner": "Attending the optional Thursday dinner",
+    "attending_optional_saturday_brunch": "Attending the optional Saturday brunch",
+    "other_notes": "Other notes",
+    "other_notes_placeholder": "Dietary restrictions, comments, or anything else you want us to know.",
+    "submit": "Submit",
+    "name": "Name",
+    "invitation_for": "Invitation for",
+    "not_found": "not found",
+    "if_mistake": "If this is a mistake, please contact us at"
+  }
+}
