@@ -24,9 +24,19 @@
   "schedule": {
     "description": "TODO: Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
     "thursday_date": "TORSDAY, 1 JUNI, 2023",
+    "thursday_description": "",
+    "welcome_event_address": "TODO",
     "friday_date": "FREDAG, 2 JUNI, 2023",
+    "friday_description": "",
+    "ceremony_address": "Lejrevej 17, 4320 Lejre",
+    "reception_address": "Slangealleen 1, 4320 Lejre",
     "saturday_date": "LØRDAG, 3 JUNI, 2023",
-    "sunday_date": "SØNDAG, 4 JUNI, 2023"
+    "saturday_description": "",
+    "saturday_event_address": "TODO",
+    "sunday_date": "SØNDAG, 4 JUNI, 2023",
+    "sunday_description": "",
+    "sunday_event_address": "TODO",
+    "map": "kort"
   },
   "rsvp_form": {
     "rsvp": "S.U.",

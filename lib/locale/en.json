@@ -23,10 +23,31 @@
   },
   "schedule": {
     "description": "Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
-    "thursday_date": "THURSDAY, JUNE 1, 2023",
-    "friday_date": "FRIDAY, JUNE 2, 2023",
-    "saturday_date": "SATURDAY, JUNE 3, 2023",
-    "sunday_date": "SUNDAY, JUNE 4, 2023"
+    "welcome_event_date": "THURSDAY, JUNE 1, 2023",
+    "welcome_event_name": "Ofelia Plads & Restaurant",
+    "welcome_event_description": "TODO",
+    "welcome_event_address": "TODO",
+
+    "ceremony_date": "FRIDAY, JUNE 2, 2023",
+    "ceremony_name": "Allerslev kirke",
+    "ceremony_address": "Lejrevej 17, 4320 Lejre, Denmark",
+    "ceremony_description": "TODO",
+
+    "reception_name": "Restaurant Herthadalen",
+    "reception_address": "Slangealleen 1, 4320 Lejre, Denmark",
+    "reception_description": "TODO",
+
+    "saturday_event_date": "SATURDAY, JUNE 3, 2023",
+    "saturday_event_name": "Gro Spiseri",
+    "saturday_event_description": "TODO",
+    "saturday_event_address": "Æbeløgade 4, København Ø, 2100, Denmark",
+
+    "sunday_event_date": "SUNDAY, JUNE 4, 2023",
+    "sunday_event_name": "TODO",
+    "sunday_event_description": "TODO",
+    "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
+
+    "map": "map"
   },
   "rsvp_form": {
     "rsvp": "RSVP",
@@ -43,7 +64,7 @@
     "do_you_need_transportation": "Do you need transportation from Copenhagen to and from the venue?",
     "yes_need_transportation": "Yes, we need transportation",
     "optional_activities": "Optional activities",
-    "attending_optional_thursday_dinner": "Attending the optional Thursday dinner",
+    "attending_optional_welcome_dinner": "Attending the optional Thursday dinner",
     "attending_optional_saturday_brunch": "Attending the optional Saturday brunch",
     "other_notes": "Other notes",
     "other_notes_placeholder": "Dietary restrictions, comments, or anything else you want us to know.",
