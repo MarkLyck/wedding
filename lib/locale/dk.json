@@ -49,6 +49,30 @@
 
     "map": "map"
   },
+  "travel": {
+    "title": "TODO: Recommendations for our out-of-town guests.",
+    "flights": "Fly",
+    "getting_to_copenhagen": "Hvordan kommer man til København",
+    "getting_to_copenhagen_description": "TODO: Copenhagen has only one international airport to fly into: Københavns Lufthavn CPH. Taking the metro from the airport to your hotel or Airbnb is the easiest mode of transport as it runs 24/7. The metro station is located in direct extension of Terminal 3. Tickets for the Metro can be purchased at the station and they take all credit cards. Use the M2 line to get direct to the city center in just 15 minutes.\n\n**Helpful note: you need to \"tap your card to check in\" and \"tap your card to check out\" for each ride you take.**\n***Note that Uber does not work in Denmark.",
+    "renting_an_apartment": "Leje lejlighed eller hus",
+    "airbnb": "AirBnB",
+    "airbnb_description": "TODO: It's possible to look for private apartments to rent in the center of the city. We recommend searching for Airbnb's in the following neighborhoods: Østerbro, Nørrebro, Indre By.",
+    "hotel": "Hotel",
+    "hotel_1_name": "Kanalhuset",
+    "hotel_1_description": "TODO: Wonderful hotel which offers small and larger apartment style rooms at a good price point. This is the location for the Welcome Dinner on Saturday night.",
+    "hotel_2_name": "A&O COPENHAGEN SYDHAVN",
+    "hotel_2_description": "TODO: 4 Sydhavns Plads, København, 2450, Denmark +45 32 70 12 10\n\nShort 1 minute walk from the Moxy Hotel and near the Metro. Clean and very affordable options for small or large groups.",
+    "rental_car": "Leje bil",
+    "rental_car_title": "EUROPCAR KØBENHAVNS LUFTHAVN KASTRUP",
+    "rental_car_description": "TODO: 2 Lufthavnsboulevarden, Kastrup, 2770, Denmark +45 32 50 30 90\n\nYou can also rent a car to travel at your own pace. Use the DK website domain for lower prices. Pickup: Københavns Lufthavn. \n\nAlternatively, car pooling is commonly used in DK, so if you are up for a chat with some Danes on your way around Denmark, make a profile at the car pool website \"www.gomore.dk\" and start your journey!",
+    "travel_note": "Rejse note",
+    "how_to_get_around_in_copenhagen": "Hvordan kommer man rundt i København?",
+    "how_to_get_around_in_copenhagen_description": "TODO: The main mode of transportation in Copenhagen is by bike, otherwise the public transport system is very easy to use. You can go by bus, the S-train, underground metro, rent a car or even walk.\n\nYou may find it helpful to download the public transport app used in DK, called \"rejseplanen\". This will provide up-to-date timetables and journey planning tools to help you find your way around. Please note Uber is not accessible in Denmark.",
+    "how_to_get_around_in_denmark": "Hvordan kommer man rundt i Danmark?",
+    "how_to_get_around_in_denmark_description": "TODO: If you are planning to travel around Denmark after the wedding, it may be helpful to know that Denmark is made up of three main land areas - Jylland, Fyn & Sjælland (Zealand, where Copenhagen is). These areas can be accessed by bus, train, plane, and car. \n\nThe bus company \"flixbus.dk\" or \"sortbillet.dk\" are both relative cheap and useful.\n\nDSB is the train company that connects Copenhagen to other areas of Denmark by train, and tickets can be bought here: https://www.dsb.dk/en/",
+    "transport_to_reception": "transport til receptionen",
+    "transport_to_reception_description": "TODO: We will be providing a coach service to take guests from Copenhagen to the wedding venue to reception and returning to Copenhagen after the evening celebrations :)\nPlease let us know if you would like a seat on the bus so that we can book the appropriate size coach."
+  },
   "rsvp_form": {
     "rsvp": "S.U.",
     "rsvp_latest_by": "RSVP senest den 1. maj, 2023",
