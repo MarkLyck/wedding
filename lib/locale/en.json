@@ -73,6 +73,24 @@
     "transport_to_reception": "transport to reception",
     "transport_to_reception_description": "We will be providing a coach service to take guests from Copenhagen to the wedding venue to reception and returning to Copenhagen after the evening celebrations :)\nPlease let us know if you would like a seat on the bus so that we can book the appropriate size coach."
   },
+  "registry": {
+    "title": "registry",
+    "description": "You're traveling from near and far, and the biggest gift you can give us is just by you being there to celebrate with us! \n\nHowever if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift would be \"vouchers\" for a special adventure, experience, or a savings fund that we can share together."
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "If you have any other questions than what we have listed here, please reach out to Mark at hello@marklyck.com.",
+    "when_should_i_arrive_question": "WHEN SHOULD I ARRIVE IN COPENHAGEN?",
+    "when_should_i_arrive_answer": "Preferably by Thursday- We will have a welcome dinner on Thursday night in order to welcome out of town guests. Let us know when you will be arriving and we will do our best to organize something on the days you are in Copenhagen. If you looking for something to do on Friday, we recommend enjoying Tivoli amusement park which often hosts concerts in the Summer on Friday evenings. If the weather is nice, you can also take a tour of Copenhagen by boat or even go for a dip in the canals!",
+    "where_should_i_stay_question": "WHERE SHOULD I STAY?",
+    "where_should_i_stay_answer": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center. Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
+    "what_is_the_dress_code_question": "WHAT IS THE DRESS CODE?",
+    "what_is_the_dress_code_answer": "Your most dashing attire, and perhaps something warm on top. Please wear what makes you feel and look your best! For example, floral dresses and pastel colors would be perfect for our garden-theme wedding! Also be prepared for Copenhagen weather in June which can vary from rain to sunshine and in the 70s °F.",
+    "covid_restrictions_question": "ARE THERE ANY COVID RESTRICTIONS I SHOULD BE AWARE OF?",
+    "covid_restrictions_answer": "There are no Covid-19 related restrictions on entry into Denmark. General covid-19 restrictions no longer apply in Denmark.",
+    "can_i_bring_a_guest_question": "CAN I BRING A GUEST?",
+    "can_i_bring_a_guest_answer": "When you fill out your RSVP, just enter your full name and it will let you know who in your family is invited and if we have a guest listed for you! We wanted to keep the wedding more intimate and wanted to be surrounded by our closest friends and family, so if you did not get a plus one, we hope you can understand where we are coming from."
+  },
   "rsvp_form": {
     "rsvp": "RSVP",
     "rsvp_latest_by": "Please RSVP latest by May 1st, 2023, using the form below.",

@@ -73,6 +73,10 @@
     "transport_to_reception": "transport til receptionen",
     "transport_to_reception_description": "TODO: We will be providing a coach service to take guests from Copenhagen to the wedding venue to reception and returning to Copenhagen after the evening celebrations :)\nPlease let us know if you would like a seat on the bus so that we can book the appropriate size coach."
   },
+  "registry": {
+    "title": "gaveideėr",
+    "description": "TODO: You're traveling from near and far, and the biggest gift you can give us is just by you being there to celebrate with us! \n\nHowever if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift would be \"vouchers\" for a special adventure, experience, or a savings fund that we can share together."
+  },
   "rsvp_form": {
     "rsvp": "S.U.",
     "rsvp_latest_by": "RSVP senest den 1. maj, 2023",
