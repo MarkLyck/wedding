@@ -63,6 +63,7 @@ const initialFormState = {
 export type SubmitData = {
   name: string
   guests: string
+  guest_names: string
   number_of_guests: number
   is_attending: boolean
   welcome_dinner: boolean
@@ -120,6 +121,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
           foodRestriction: guest.foodRestriction,
         }))
       ),
+      guest_names: formState.guests.map((guest) => guest.name).join(', '),
       number_of_guests: formState.number_of_guests,
       is_attending: formState.is_attending ?? false,
       welcome_dinner: formState.welcome_dinner ?? false,
@@ -357,7 +359,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                     htmlFor="welcome_dinner"
                     className="text-right font-normal"
                   >
-                    {t('attending_optional_thursday_dinner')}
+                    {t('attending_optional_welcome_dinner')}
                   </Label>
                 </div>
                 <div className="flex items-center gap-2 ">

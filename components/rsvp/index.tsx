@@ -19,26 +19,8 @@ import { RSVPForm } from './form'
 import type { SubmitData } from './form'
 import { Success } from './success'
 
-const AIRTABLE_API_KEY =
-  'pat9RxLTubLn628rL.c4dc6feeec3a99abdc8cd996e884df1eb6e474b75e7777e552227098cd0a83d2'
-
 const createGuest = async (data: SubmitData) => {
-  return await axios.post(
-    'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201',
-    {
-      records: [
-        {
-          fields: data,
-        },
-      ],
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-    }
-  )
+  return await axios.post('/api/rsvp', data)
 }
 
 const dialogContentStyles = cva('', {
