@@ -13,7 +13,7 @@ export const Hero = () => {
           <LocaleButton />
         </div>
         <div
-          className={`${cormorantGaramond.className} flex flex-col items-center justify-center pt-40`}
+          className={`${cormorantGaramond.className} flex flex-col items-center justify-center pt-48`}
         >
           <h2 className="text-lg font-semibold text-black">
             {t('hero.title')}
