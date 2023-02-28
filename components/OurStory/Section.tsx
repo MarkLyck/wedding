@@ -7,19 +7,22 @@ import { cormorantGaramond } from '@/lib/fonts'
 type SectionProps = {
   title: string
   date: string
-  imageSrc: string
+  imageSrc: any
   description: string
   direction: 'left' | 'right'
 }
 
-const sectionStyles = cva(['flex', 'w-full', 'justify-center', 'gap-24'], {
-  variants: {
-    direction: {
-      right: ['flex-row'],
-      left: ['flex-row-reverse'],
+const sectionStyles = cva(
+  ['flex', 'w-full', 'justify-center', 'gap-24', 'items-center'],
+  {
+    variants: {
+      direction: {
+        right: ['flex-row'],
+        left: ['flex-row-reverse'],
+      },
     },
-  },
-})
+  }
+)
 
 const imageStyles = cva(['flex', 'w-1/2'], {
   variants: {
