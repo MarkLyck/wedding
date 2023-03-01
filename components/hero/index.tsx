@@ -7,11 +7,11 @@ export const Hero = () => {
   const t = useTranslations('home')
 
   return (
-    <div className="h-screen bg-white p-8">
-      <div className={`relative h-full bg-hero bg-cover bg-top`}>
-        <div className="absolute top-4 right-4">
-          <LocaleButton />
-        </div>
+    <div className="text-center">
+      <div className="absolute top-8 right-8">
+        <LocaleButton />
+      </div>
+      <div className={`relative h-[600px] bg-hero bg-cover bg-top`}>
         <div
           className={`${cormorantGaramond.className} flex flex-col items-center justify-center pt-48`}
         >
@@ -21,7 +21,7 @@ export const Hero = () => {
           <p
             className={`font-500 mb-4 text-4xl tracking-tight text-black sm:text-5xl lg:text-6xl`}
           >
-            Mark & Grace
+            Grace & Mark
           </p>
           <p className={`mx-auto max-w-xl text-xl text-black`}>
             {t('hero.date')}

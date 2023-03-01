@@ -1,10 +1,13 @@
 import { Navigation } from '@/components/Navigation'
 import { Faq } from '@/components/faq'
+import { PageContent } from '@/ui/PageContent'
 
 const Page = () => (
-  <div className="space-y-6">
+  <div>
     <Navigation />
-    <Faq />
+    <PageContent>
+      <Faq />
+    </PageContent>
   </div>
 )
 
