@@ -8,7 +8,7 @@ export const Hero = () => {
 
   return (
     <div className="text-center">
-      <div className="absolute top-8 right-8">
+      <div className="absolute top-4 right-4">
         <LocaleButton />
       </div>
       <div className={`relative h-[600px] bg-hero bg-cover bg-top`}>

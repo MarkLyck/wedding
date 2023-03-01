@@ -60,13 +60,7 @@ const ScheduleItem = ({
 }: ScheduleItemProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-8 md:flex-row">
-      <div className="flex w-full flex-col items-center md:w-1/2">
-        <h3
-          className={`${cormorantGaramond.className} mb-4 max-w-[400px] text-center text-2xl`}
-        >
-          {title}
-        </h3>
-        <p className="mb-4">{time}</p>
+      <div className="flex w-full flex-col items-center animate-in fade-in slide-in-from-left duration-1000 md:w-1/2">
         <Image
           src={imageSrc}
           className="h-[400px] rounded object-cover object-center"
@@ -74,6 +68,12 @@ const ScheduleItem = ({
           width={400}
           alt={locationName}
         />
+        <h3
+          className={`${cormorantGaramond.className} mt-4 max-w-[400px] text-center text-2xl`}
+        >
+          {title}
+        </h3>
+        <p className="font-md">{time}</p>
       </div>
       <div className="flex w-full flex-col items-center gap-4 md:w-1/2">
         <p className={`${cormorantGaramond.className} text-xl`}>

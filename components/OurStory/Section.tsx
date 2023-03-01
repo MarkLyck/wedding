@@ -24,14 +24,17 @@ const sectionStyles = cva(
   }
 )
 
-const imageStyles = cva(['flex', 'w-1/2'], {
-  variants: {
-    direction: {
-      right: ['justify-end'],
-      left: ['justify-start'],
+const imageStyles = cva(
+  ['flex', 'w-1/2', 'animate-in', 'fade-in', 'duration-1000'],
+  {
+    variants: {
+      direction: {
+        right: ['justify-end', 'slide-in-from-left'],
+        left: ['justify-start', 'slide-in-from-right'],
+      },
     },
-  },
-})
+  }
+)
 
 const textContainerStyles = cva(['flex', 'w-1/2', 'flex-col', 'gap-2'], {
   variants: {
@@ -65,7 +68,7 @@ export const Section = ({
         alt={title}
         height={320}
         width={320}
-        className="h-80 rounded object-cover object-center"
+        className={`h-80 rounded object-cover object-center `}
       />
     </div>
     <div className={textContainerStyles({ direction })}>
