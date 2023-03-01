@@ -6,6 +6,7 @@ import { Section } from './Section'
 import howWeMetImg from './images/after_we_met.jpg'
 import newYorkImg from './images/new_york.jpg'
 import proposalImg from './images/proposal.jpg'
+import weddingImg from './images/wedding.jpg'
 
 export const OurStory = () => {
   const t = useTranslations('our_story')
@@ -39,7 +40,7 @@ export const OurStory = () => {
           title={t('got_married_title')}
           date={t('got_married_date')}
           description={t('got_married_description')}
-          imageSrc={proposalImg}
+          imageSrc={weddingImg}
           direction="left"
         />
       </div>
