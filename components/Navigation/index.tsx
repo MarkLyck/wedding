@@ -15,7 +15,7 @@ const NavLink = ({
 }) => (
   <Link
     href={href}
-    className={`${className} after:content-[' '] relative px-4 py-2 text-zinc-500 transition-colors duration-200 after:absolute after:top-1/2 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 after:bg-neutral-600 hover:text-black`}
+    className={`${className} after:content-[' '] after:bg-neutral-600 text-bold relative px-4 py-2 text-neutral-100 transition-colors duration-200 after:absolute after:top-1/2 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 hover:text-black`}
   >
     {children}
   </Link>
@@ -25,7 +25,7 @@ export const Navigation = () => {
   const t = useTranslations('navigation')
 
   return (
-    <div className="flex w-full  justify-center pt-8">
+    <div className="flex w-full pt-8 pl-8">
       <ul className="flex items-center">
         <li>
           <NavLink href="/" className="after:content-[]">

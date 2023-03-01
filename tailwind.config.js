@@ -11,8 +11,12 @@ module.exports = {
     'components/**/*.{ts,tsx}',
   ],
   theme: {
+    backgroundColor: {
+      parchment: '#DBDCD4',
+    },
     backgroundImage: {
       hero: 'url("../public/images/engagement/pillars.jpg")',
+      hero2: 'url("../public/images/engagement/engagement_dark.jpg")',
       // hero: 'linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 97%), url("../public/images/engagement/pillars.jpg")',
     },
     container: {
