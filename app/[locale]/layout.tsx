@@ -16,6 +16,10 @@ type RootLayoutProps = {
   params: any
 }
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => (
+  <div className="h-full min-h-screen bg-stone-100">{children}</div>
+)
+
 const RootLayout = ({ children, params }: RootLayoutProps) => {
   const locale = useLocale()
   const messages = getMessages(locale)
@@ -31,7 +35,9 @@ const RootLayout = ({ children, params }: RootLayoutProps) => {
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>{children}</Providers>
+          <Providers>
+            <Wrapper>{children}</Wrapper>
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,12 +1,15 @@
 import { Navigation } from '@/components/Navigation'
 import { OurStory } from '@/components/OurStory'
 import { Hero } from '@/components/hero'
+import { PageContent } from '@/ui/PageContent'
 
 const Page = () => (
-  <div className="mx-auto flex max-w-7xl flex-col">
+  <div>
     <Navigation />
-    <Hero />
-    <OurStory />
+    <PageContent>
+      <Hero />
+      <OurStory />
+    </PageContent>
   </div>
 )
 
