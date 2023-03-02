@@ -3,7 +3,7 @@
 import { Link, useTranslations } from 'next-intl'
 
 import { RSVP } from '@/components/rsvp'
-import { cormorantGaramond } from '@/lib/fonts'
+import { fancyFont } from '@/lib/fonts'
 
 const NavLink = ({
   href,
@@ -30,7 +30,7 @@ export const Navigation = () => {
       <div className="flex justify-center">
         <Link
           href="/"
-          className={`${cormorantGaramond.className} mx-auto my-6 inline text-center text-4xl text-stone-800 transition-colors duration-200 hover:cursor-pointer hover:text-black`}
+          className={`${fancyFont.className} mx-auto my-6 inline text-center text-4xl text-stone-800 transition-colors duration-200 hover:cursor-pointer hover:text-black`}
         >
           Grace & Mark
         </Link>
