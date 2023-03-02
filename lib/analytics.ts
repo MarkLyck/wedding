@@ -5,6 +5,7 @@ const isBrowser = process.browser
 let analyticsInitialized = false
 
 export const analyticsInit = () => {
+  console.log('analyticsInit')
   if (analyticsInitialized) return
 
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_API_KEY as string, {

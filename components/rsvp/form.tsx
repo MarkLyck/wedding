@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { useDebounce } from 'ahooks'
 import { Plus, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import posthog from 'posthog-js'
 
 import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -119,7 +120,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
   }, [mainGuest])
 
   const handleSubmit = () => {
-    submit({
+    const submitData = {
       name: formState.name,
       guests: JSON.stringify(
         formState.guests.map((guest) => ({
@@ -135,7 +136,10 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
       food_restrictions: formState.food_restrictions ?? false,
       need_transportation: formState.need_transportation ?? false,
       notes: formState.notes,
-    })
+    }
+    posthog.capture('rsvp', submitData)
+
+    submit(submitData)
   }
 
   return (
