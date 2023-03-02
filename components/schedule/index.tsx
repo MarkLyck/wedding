@@ -6,7 +6,7 @@ import { Map } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
-import { cormorantGaramond } from '@/lib/fonts'
+import { fancyFont } from '@/lib/fonts'
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
 
@@ -69,16 +69,14 @@ const ScheduleItem = ({
           alt={locationName}
         />
         <h3
-          className={`${cormorantGaramond.className} mt-4 max-w-[400px] text-center text-2xl`}
+          className={`${fancyFont.className} mt-4 max-w-[400px] text-center text-2xl`}
         >
           {title}
         </h3>
         <p className="font-md">{time}</p>
       </div>
       <div className="flex w-full flex-col items-center gap-4 md:w-1/2">
-        <p className={`${cormorantGaramond.className} text-xl`}>
-          {locationName}
-        </p>
+        <p className={`${fancyFont.className} text-xl`}>{locationName}</p>
         <EventDescription>{description}</EventDescription>
         <address className="underline">{address}</address>
         <MapButton href={mapsLink} />

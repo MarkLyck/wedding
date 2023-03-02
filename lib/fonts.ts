@@ -5,7 +5,7 @@ export const inter = Inter({
   display: 'swap',
 })
 
-export const cormorantGaramond = Cormorant_Garamond({
+export const fancyFont = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   style: ['normal'],

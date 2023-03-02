@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { cva } from 'class-variance-authority'
 
-import { cormorantGaramond } from '@/lib/fonts'
+import { fancyFont } from '@/lib/fonts'
 
 type SectionProps = {
   title: string
@@ -72,8 +72,8 @@ export const Section = ({
       />
     </div>
     <div className={textContainerStyles({ direction })}>
-      <h3 className={`${cormorantGaramond.className} text-4xl`}>{title}</h3>
-      <h4 className={`${cormorantGaramond.className} text-2xl`}>{date}</h4>
+      <h3 className={`${fancyFont.className} text-4xl`}>{title}</h3>
+      <h4 className={`${fancyFont.className} text-2xl`}>{date}</h4>
       <p className={descriptionStyles({ direction })}>{description}</p>
     </div>
   </section>
