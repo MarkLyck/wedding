@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useDebounce } from 'ahooks'
 import { Plus, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import posthog from 'posthog-js'
+import { usePostHog } from 'posthog-js/react'
 
 import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -81,6 +81,7 @@ type RSVPFormProps = {
 }
 
 export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
+  const posthog = usePostHog()
   const t = useTranslations('rsvp_form')
   const [formState, setFormState] = useState<FormState>(initialFormState)
   const debouncedName = useDebounce(formState.name, { wait: 1000 })
@@ -137,7 +138,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
       need_transportation: formState.need_transportation ?? false,
       notes: formState.notes,
     }
-    posthog.capture('rsvp', submitData)
+    posthog?.capture('rsvp', submitData)
 
     submit(submitData)
   }
