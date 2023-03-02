@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
+import { analyticsIdentify } from '@/lib/analytics'
 
 import { guestList } from './guests'
 import type { Guest } from './guests'
@@ -92,6 +93,11 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
 
   useEffect(() => {
     if (mainGuest) {
+      analyticsIdentify({
+        id: mainGuest.name.replace(' ', '_'),
+        firstName: mainGuest.name.split(' ')[0],
+        lastName: mainGuest.name.split(' ')[1],
+      })
       const additionalGuests: Guest[] =
         mainGuest.linkedGuests?.map((name) => ({
           name,
@@ -187,7 +193,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
           <Alert>
             <p className="flex flex-col">
               <span>
-                {t('invitation_for')}"
+                {t('invitation_for')} "
                 <span className="font-bold">{formState.name}</span>"{' '}
                 {t('not_found')}.
               </span>
