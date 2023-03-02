@@ -10,6 +10,7 @@ import { queryClient } from '@/lib/queryClient'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    console.log('Providers useEffect')
     analyticsInit()
   }, [])
 
