@@ -40,23 +40,6 @@ export const Travel = () => {
         title={t('airbnb')}
         description={t('airbnb_description')}
       />
-      {/* <TravelSection
-        Icon={Bed}
-        title={t('hotels')}
-        description={t('hotels_description')}
-      /> */}
-      <TravelSection
-        Icon={Bed}
-        type={t('hotel')}
-        title={t('hotel_1_name')}
-        description={t('hotel_1_description')}
-      />
-      <TravelSection
-        Icon={Bed}
-        type={t('hotel')}
-        title={t('hotel_2_name')}
-        description={t('hotel_2_description')}
-      />
       <TravelSection
         Icon={Car}
         type={t('rental_car')}
