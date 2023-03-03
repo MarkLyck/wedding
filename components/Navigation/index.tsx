@@ -49,7 +49,9 @@ export const Navigation = () => {
             <NavLink href="/travel">{t('travel')}</NavLink>
           </li>
           <li>
-            <NavLink href="/registry">{t('registry')}</NavLink>
+            <NavLink href="https://www.zola.com/wedding/parklyckwedding/registry">
+              {t('registry')}
+            </NavLink>
           </li>
           <li>
             <NavLink href="/faq">{t('faq')}</NavLink>
