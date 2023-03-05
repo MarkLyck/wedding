@@ -1,4 +1,4 @@
-import { Bed, Bus, Car, Home, Plane, Train } from 'lucide-react'
+import { Bus, Car, Home, Plane, Train } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 import { Description } from '@/ui/Description'

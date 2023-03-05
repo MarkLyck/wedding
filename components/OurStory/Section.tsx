@@ -13,43 +13,54 @@ type SectionProps = {
 }
 
 const sectionStyles = cva(
-  ['flex', 'w-full', 'justify-center', 'gap-24', 'items-center'],
+  ['flex', 'flex-col', 'w-full', 'justify-center', 'gap-24', 'items-center'],
   {
     variants: {
       direction: {
-        right: ['flex-row'],
-        left: ['flex-row-reverse'],
+        right: ['md:flex-row'],
+        left: ['md:flex-row-reverse'],
       },
     },
   }
 )
 
 const imageStyles = cva(
-  ['flex', 'w-1/2', 'animate-in', 'fade-in', 'duration-1000'],
+  [
+    'flex',
+    'justify-center',
+    'w-full',
+    'md:w-1/2',
+    'animate-in',
+    'fade-in',
+    'duration-1000',
+  ],
   {
     variants: {
       direction: {
-        right: ['justify-end', 'slide-in-from-left'],
-        left: ['justify-start', 'slide-in-from-right'],
+        right: ['md:justify-end', 'md:slide-in-from-left'],
+        left: ['md:justify-start', 'md:slide-in-from-right'],
       },
     },
   }
 )
 
-const textContainerStyles = cva(['flex', 'w-1/2', 'flex-col', 'gap-2'], {
-  variants: {
-    direction: {
-      right: ['text-left'],
-      left: ['text-right'],
+const textContainerStyles = cva(
+  ['flex', 'w-full', 'md:w-1/2', 'flex-col', 'gap-2', 'text-center'],
+  {
+    variants: {
+      direction: {
+        right: ['md:text-left'],
+        left: ['md:text-right'],
+      },
     },
-  },
-})
+  }
+)
 
-const descriptionStyles = cva(['max-w-sm'], {
+const descriptionStyles = cva(['max-w-sm', 'text-center'], {
   variants: {
     direction: {
-      right: ['text-left', 'mr-auto'],
-      left: ['text-right', 'ml-auto'],
+      right: ['md:text-left', 'md:mr-auto'],
+      left: ['md:text-right', 'md:ml-auto'],
     },
   },
 })

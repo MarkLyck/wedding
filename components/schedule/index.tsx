@@ -14,7 +14,7 @@ import churchImg from './images/allerslev_kirke.jpg'
 import groSpiseriImg from './images/gro_spiseri.jpg'
 import harbourImg from './images/harbour_bathing.jpg'
 import herthadalenImg from './images/herthadalen2.jpg'
-import ofiliaImg from './images/ofelia.jpg'
+import heyCaptainImg from './images/hey_captain.jpg'
 
 const EventDescription = ({ children }: { children: React.ReactNode }) => (
   <p className="max-w-md whitespace-pre-line text-center md:text-left">
@@ -108,7 +108,7 @@ export const Schedule = () => {
         description={t('welcome_event_description')}
         address={t('welcome_event_address')}
         mapsLink="https://goo.gl/maps/xBrBUv9WjiTvm7Cq9"
-        imageSrc={ofiliaImg}
+        imageSrc={heyCaptainImg}
       />
 
       <DateSeparator>{t('ceremony_date')}</DateSeparator>
