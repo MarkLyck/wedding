@@ -14,7 +14,7 @@ export const OurStory = () => {
     <div className="flex flex-col gap-8 p-8">
       <SectionHeader title={t('title')} description="" />
       <div className="relative flex flex-col gap-8 p-8">
-        <div className="absolute inset-y-4 left-1/2 w-0.5 bg-zinc-300" />
+        <div className="absolute inset-y-4 left-1/2 w-0.5 bg-zinc-300 opacity-0 md:opacity-100" />
         <Section
           title={t('how_we_met_title')}
           date="06. 02. 2019"
