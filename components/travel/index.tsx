@@ -26,7 +26,7 @@ const TravelSection = ({
 export const Travel = () => {
   const t = useTranslations('travel')
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-12">
       <Title>{t('title')}</Title>
       <Description>{t('description')}</Description>
       <TravelSection
