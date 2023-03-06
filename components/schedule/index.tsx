@@ -98,7 +98,7 @@ export const Schedule = () => {
   return (
     <div className="flex flex-col items-center gap-8">
       <Title>{t('title')}</Title>
-      <Description>{t('description')}</Description>
+      <Description className="mb-8">{t('description')}</Description>
       <DateSeparator>{t('welcome_event_date')}</DateSeparator>
 
       <ScheduleItem
@@ -150,7 +150,7 @@ export const Schedule = () => {
         mapsLink="https://goo.gl/maps/2yv97vTVzHBzU5Jo8"
         imageSrc={harbourImg}
       />
-      <p>{t('end_comment')}</p>
+      <p className="mt-24">{t('end_comment')}</p>
     </div>
   )
 }
