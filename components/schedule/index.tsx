@@ -150,6 +150,7 @@ export const Schedule = () => {
         mapsLink="https://goo.gl/maps/2yv97vTVzHBzU5Jo8"
         imageSrc={harbourImg}
       />
+      <p>{t('end_comment')}</p>
     </div>
   )
 }

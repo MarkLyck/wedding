@@ -44,9 +44,7 @@ export const OurStory = () => {
           direction="left"
         />
       </div>
-      <h2 className="text-center">
-        Celebrating our marriage in Copenhagen, Denmark with you!
-      </h2>
+      <h2 className="text-center">{t('celebrating_our_marriage')}</h2>
     </div>
   )
 }

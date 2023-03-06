@@ -7,85 +7,90 @@
     "schedule": "schedule",
     "travel": "travel",
     "registry": "registry",
-    "faq": "faq"
+    "faq": "FAQ"
   },
   "home": {
     "hero": {
       "title": "Let's celebrate!",
-      "date": "Friday June 2nd, 2023 Copenhagen"
+      "date": "June 2, 2023 \n\nDenmark"
     }
   },
   "our_story": {
     "title": "A short timeline of our story",
-    "subtitle": "TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua ut enim minim veniam, quis nostrud.",
     "how_we_met_title": "Met in South America",
-    "how_we_met_description": "We met when we were both solo-traveling in Medellin, Columbia. We happened to go on the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. We met on 649 steps to the top of the monolith. The climb was followed by a tour to the nearby local town where we visited a small margarita bar.",
+    "how_we_met_description": "We met one summer as we were both solo-traveling in Medellín, Colombia. We booked the same bus tour to El Peñón de Guatapé, a giant monolith surrounded by beautiful lakes. One of us barely made the bus before it departed but we were lucky no one was left behind that day. We met on the 649 steps up to the top of El Penon de Guatape. The climb was followed by a tour to the nearby local town where we visited a small margarita bar.",
     "moved_to_new_york_title": "Moved to New York",
     "moved_to_new_york_date": "Fall 2019",
-    "moved_to_new_york_description": "After our trip Grace moved to New York to start her residency in pediatric dentistry. Mark came to visit shortly after and later moved to New York to join Grace.",
+    "moved_to_new_york_description": "After the South America trip, Grace moved to New York City to start her residency in pediatric dentistry. Mark continued his travels and eventually moved to NYC to join Grace.",
     "got_engaged_title": "Engaged in the Caribbean",
     "got_engaged_date": "October 2020",
     "got_engaged_description": "In October we went on a trip to the Dominican Republic where Mark planned a surprise proposal in Altos de Chavón, a beautiful Mediterranean style town. She said yes!",
     "got_married_title": "Married in D.C",
     "got_married_date": "November 2021",
-    "got_married_description": "After over a year of waiting we finally got our fiancé visa and were able to get married in central Washington D.C."
+    "got_married_description": "After over a year of waiting we finally got our fiancé visa and were able to get married in central Washington D.C.",
+    "celebrating_our_marriage": "Celebrating our marriage in Denmark with you!"
   },
   "schedule": {
     "title": "Schedule",
-    "description": "Here's what to expect during our wedding celebration. Feel free to join any part of the event - we can't wait to celebrate with you!",
+    "description": "Feel free to join us for any part of the events - we can't wait to celebrate with you!",
     "welcome_event_date": "THURSDAY, JUNE 1, 2023",
-    "welcome_event_time": "5:45 PM - 9:00 PM",
-    "welcome_event_title": "CANAL CRUISE & WELCOME DRINKS",
+    "welcome_event_time": "5:30 PM - 9:00 PM",
+    "welcome_event_title": "CANAL CRUISE & WELCOME EVENT",
     "welcome_event_name": "Ofelia Plads",
-    "welcome_event_description": "If you arrive in Copenhagen early - which we highly recommend - please join us for our welcome event! Everyone is welcome to join us, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads where we will begin a 1-hour canal tour of Copenhagen's historical sites and iconic canals. After the boat tour, we will enjoy light bites and drinks at the waterfront restaurant __ and end the evening watching the sunset! Please let us know if you can make it and if we should reserve a spot for you.\n\n*Please note that this event is weather permitting as it takes place outside and the weather in Copenhagen can be temperamental.",
+    "welcome_event_description": "If you arrive in Copenhagen early - which we highly recommend - please join us for our welcome event! Everyone is welcome to join us, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads at 5:30 pm where we will begin a 1-hour canal tour of Copenhagen's historical sites and iconic canals. After the boat tour, we will enjoy food and drinks by the water and end the evening watching the sunset! Please let us know if you can make it and if we should reserve a spot for you.\n\n*Please note that this is a rain or shine event! in case it rains there will be a convertible roof. Please dress appropriately and consider bringing a light jacket or sweater. :)",
     "welcome_event_address": "Kvæsthusbroen 1, København, 1250, Denmark",
 
     "ceremony_date": "FRIDAY, JUNE 2, 2023",
     "ceremony_title": "CHURCH CEREMONY",
-    "ceremony_time": "2:30 PM - 3:30 PM",
+    "ceremony_time": "2:00 PM - 3:00 PM",
     "ceremony_name": "Allerslev kirke",
     "ceremony_address": "17 Lejrevej, Lejre, 4320, Denmark",
-    "ceremony_description": "Transportation will be provided to and from the wedding - please meet us at __________ at 12:45 pm for pickup. The bus will leave promptly and it will be a 45-minute drive to Allerslev church in Lejre. After the ceremony, the bus will depart at 3:30 pm to Restaurant Herthadalen where the reception will be held.",
+    "ceremony_description": "Transportation will be provided to and from the wedding - please meet us at Copenhagen central bus terminal at 1:30 pm for pickup and it will be a 45-minute drive to Allerslev church in Lejre. After the ceremony, the bus will depart at 3:30 pm to Restaurant Herthadalen where the reception will be held (it is a short 7-minute drive).",
 
     "reception_name": "Restaurant Herthadalen",
     "reception_title": "RECEPTION, DINNER & GAMES",
-    "reception_time": "4:30 PM - 11:00 PM",
+    "reception_time": "4:00 PM - 11:00 PM",
     "reception_address": "Slangealleen 1, Lejre, 4320, Denmark",
-    "reception_description": "A cocktail hour (and treasure hunt) will begin at 4:30 pm and dinner starts at 6:00 pm. Toasts, speeches, songs, games, quizzes and other micro-events are encouraged during or after the dinner (Please reach out to toast-master ___).\n\nFollowing dinner, we will have our first dance incorporating some Danish traditions and activities. Late night snacks will be provided before the bus departs back to Copenhagen at 11:00 pm.",
+    "reception_description": "A cocktail hour (and treasure hunt) will begin at 4:00 pm, so you may arrive at any point between then and when dinner starts at 6:00 pm. Toasts, speeches, songs and games are encouraged during or after the dinner. Please reach out to toast-master (to be announced).",
 
     "saturday_event_date": "SATURDAY, JUNE 3, 2023",
     "saturday_event_title": "DAY AFTER LUNCH & TOUR OF COPENHAGEN",
     "saturday_event_time": "12:00 PM - 2:30 PM",
     "saturday_event_name": "Gro Spiseri",
-    "saturday_event_description": "If you want to keep the festivities going, join us for lunch inside a rooftop greenhouse located in Østerbro. The 3-course lunch will begin with a short tour of the rooftop urban farm. Please enter into the yard and climb up the spiral stairs. For those interested, we will go on a walking tour and explore more of Copenhagen in the late afternoon.\n\n*Please note there will be limited space in the greenhouse and we'll be giving priority to out-of-town guests.",
+    "saturday_event_description": "If you want to keep the festivities going, join us for lunch inside a cozy greenhouse located in Østerbro. The 3-course lunch will begin with a short tour of the rooftop urban farm. Please enter into the yard and climb up the spiral stairs. For those interested, we will go on a walking tour and explore more of Copenhagen in the late afternoon.\n\n*Please note there will be limited space in the greenhouse and we'll be giving priority to out-of-town guests.",
     "saturday_event_address": "Æbeløgade 4, København Ø, 2100, Denmark",
 
     "sunday_event_date": "SUNDAY, JUNE 4, 2023",
     "sunday_event_title": "SUNDAY SUNBATHING AT THE HARBOUR",
     "sunday_event_name": "La Banchina",
     "sunday_event_time": "12:00 PM",
-    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing while drinking natural wine + eating fresh seafood!",
+    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing while enjoying natural wine and fresh seafood! We will book a sauna session for those who want to take a dip in the water and warm up after.",
     "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
 
-    "map": "map"
+    "map": "map",
+    "end_comment": "We will be updating the website as we go so please check back closer to the wedding date!"
   },
   "travel": {
     "title": "Recommendations For Our Out-Of-Town Guests.",
+    "description": "We hope you get a chance to explore Copenhagen while you're in town. If you are in town for a longer stay and would like recommendations for things to do outside of Copenhagen such as day trips, please let us know.",
     "flights": "Flights",
     "getting_to_copenhagen": "Getting to Copenhagen",
-    "getting_to_copenhagen_description": "Copenhagen has only one international airport to fly into: Københavns Lufthavn CPH. Taking the metro from the airport to your hotel or Airbnb is the easiest mode of transport as it runs 24/7. The metro station is located in direct extension of Terminal 3. Tickets for the Metro can be purchased at the station and they take all credit cards. Use the M2 line to get direct to the city center in just 15 minutes.\n\n*Note that Uber does not work in Denmark.",
+    "getting_to_copenhagen_description": "Copenhagen has only one international airport to fly into: Københavns Lufthavn CPH. Taking the metro from the airport to your hotel or Airbnb is the easiest mode of transport as it runs 24/7. The metro station is located in direct extension of Terminal 3. Tickets for the Metro can be purchased at the station and they take all credit cards. Use the M2 line to get direct to the city center in just 15 minutes.\n\n*Please note that Uber is not accessible in Denmark.",
     "renting_an_apartment": "Renting an apartment or house",
     "airbnb": "AirBnB",
     "airbnb_description": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center in København K. Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
+    "hotel": "Hotel",
+    "hotel_title": "Kanalhuset Hotel",
+    "hotel_description": "62A Overgaden Oven Vandet, København,1415\n\nApartment-style hotel rooms by the canal. If you would like to reserve a room, reach out to us and we can help to coordinate for a small group discount.",
     "rental_car": "Rental car",
-    "rental_car_title": "EUROPCAR KØBENHAVNS LUFTHAVN KASTRUP",
+    "rental_car_title": "Europecar Københavns lufthavn Kastrup",
     "rental_car_description": "2 Lufthavnsboulevarden, Kastrup, 2770, Denmark +45 32 50 30 90\n\nYou can also rent a car to travel at your own pace. Use the DK website domain for lower prices. Pickup location is Københavns Lufthavn.",
     "travel_note": "Travel note",
-    "how_to_get_around_in_copenhagen": "HOW TO GET AROUND IN COPENHAGEN",
+    "how_to_get_around_in_copenhagen": "How to get around in Copenhagen",
     "how_to_get_around_in_copenhagen_description": "The main mode of transportation in Copenhagen is by bike, otherwise the public transport system is very easy to use. You can go by bus, the S-train, underground metro, rent a car or even walk. \n\nYou may find it helpful to download the public transport app, called \"rejseplanen\". This will provide up-to-date timetables and journey planning tools to help you find your way around. Please note Uber is not accessible in Denmark.",
-    "how_to_get_around_in_denmark": "HOW TO GET AROUND IN COPENHAGEN",
-    "how_to_get_around_in_denmark_description": "If you are planning to travel around Denmark after the wedding, it may be helpful to know that Denmark is made up of three main land areas - Jylland, Fyn & Sjælland (Zealand, where Copenhagen is). These areas can be accessed by bus, train, plane, and car. \n\nThe bus company \"flixbus.dk\" or \"sortbillet.dk\" are both relative cheap and useful. \n\nDSB is the train company that connects Copenhagen to other areas of Denmark by train, and tickets can be bought here: https://www.dsb.dk/en/\n\nFlights to Jylland can be bought through \"Norwegian Air\" or \"SAS\".",
-    "transport_to_reception": "transport to reception",
+    "how_to_get_around_in_denmark": "How to get around in Denmark",
+    "how_to_get_around_in_denmark_description": "If you are planning to travel around Denmark after the wedding, it may be helpful to know that Denmark is made up of three main land areas - Jylland, Fyn & Sjælland (where Copenhagen is). These areas can be accessed by bus, train, plane, and car. SB is the train company that connects Copenhagen to other areas of Denmark by train, and tickets can be bought here: www.dsb.dk/en/\n\nThe bus company \"flixbus.dk\" or \"sortbillet.dk\" are both relative cheap and useful. Flights to Jylland can be bought through \"Norwegian Air\" or \"SAS\".",
+    "transport_to_reception": "Transport to reception",
     "transport_to_reception_description": "We will be providing a coach service to take guests from Copenhagen to the wedding venue to reception and returning to Copenhagen after the evening celebrations. Please let us know if you would like a seat on the bus so that we can book the appropriate size coach."
   },
   "registry": {
