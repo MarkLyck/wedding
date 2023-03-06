@@ -1,8 +1,12 @@
+import Image from 'next/image'
+
 import { Bus, Car, Home, Plane, Train } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
+
+import nyhavnImg from './images/nyhavn.jpg'
 
 const TravelSection = ({
   type,
@@ -20,6 +24,7 @@ const TravelSection = ({
     <span>{type}</span>
     <Title>{title}</Title>
     <Description>{description}</Description>
+    <div className="mt-8 h-[1px] w-full rounded bg-zinc-400" />
   </div>
 )
 
@@ -29,6 +34,13 @@ export const Travel = () => {
     <div className="flex flex-col items-center gap-12">
       <Title>{t('title')}</Title>
       <Description>{t('description')}</Description>
+      <Image
+        src={nyhavnImg}
+        height={280}
+        width={600}
+        alt="nyhavn"
+        className="rounded"
+      />
       <TravelSection
         Icon={Plane}
         type={t('flights')}

@@ -1,6 +1,7 @@
 {
   "common": {
-    "language": "Dansk"
+    "language": "Dansk",
+    "footer": "With love, Grace & Mark"
   },
   "navigation": {
     "home": "Home",
@@ -71,7 +72,7 @@
     "end_comment": "We will be updating the website as we go so please check back closer to the wedding date!"
   },
   "travel": {
-    "title": "Recommendations For Our Out-Of-Town Guests.",
+    "title": "Travel recommendations",
     "description": "We hope you get a chance to explore Copenhagen while you're in town. If you are in town for a longer stay and would like recommendations for things to do outside of Copenhagen such as day trips, please let us know.",
     "flights": "Flights",
     "getting_to_copenhagen": "Getting to Copenhagen",
@@ -80,7 +81,7 @@
     "airbnb": "AirBnB",
     "airbnb_description": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center in København K. Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
     "hotel": "Hotel",
-    "hotel_title": "Kanalhuset Hotel",
+    "hotel_title": "Kanalhuset",
     "hotel_description": "62A Overgaden Oven Vandet, København,1415\n\nApartment-style hotel rooms by the canal. If you would like to reserve a room, reach out to us and we can help to coordinate for a small group discount.",
     "rental_car": "Rental car",
     "rental_car_title": "Europecar Københavns lufthavn Kastrup",
@@ -95,7 +96,7 @@
   },
   "registry": {
     "title": "registry",
-    "description": "You're traveling from near and far, and the biggest gift you can give us is just by you being there to celebrate with us. \n\nHowever if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift would be \"vouchers\" for a special adventure, experience, or a savings fund that we can share together.\n\n Here are some inspiration for wedding gifts",
+    "description": "You're traveling from near and far, just having you there celebrating with us is enough of a gift for us! But if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift could be 'vouchers' with a creative idea for what your gift could be used for!\n\nHere is some inspiration for wedding gifts.",
     "gift_1_title": "Honeymoon resort",
     "gift_1_description": "We would love to spend our honeymoon at a beautiful resort!",
     "gift_2_title": "Date night!",
