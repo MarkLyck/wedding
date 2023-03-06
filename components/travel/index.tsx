@@ -28,6 +28,7 @@ export const Travel = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       <Title>{t('title')}</Title>
+      <Description>{t('description')}</Description>
       <TravelSection
         Icon={Plane}
         type={t('flights')}
@@ -39,6 +40,12 @@ export const Travel = () => {
         type={t('renting_an_apartment')}
         title={t('airbnb')}
         description={t('airbnb_description')}
+      />
+      <TravelSection
+        Icon={Home}
+        type={t('hotel')}
+        title={t('hotel_title')}
+        description={t('hotel_description')}
       />
       <TravelSection
         Icon={Car}
