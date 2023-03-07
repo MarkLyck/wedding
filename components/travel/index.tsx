@@ -60,12 +60,6 @@ export const Travel = () => {
         description={t('hotel_description')}
       />
       <TravelSection
-        Icon={Car}
-        type={t('rental_car')}
-        title={t('rental_car_title')}
-        description={t('rental_car_description')}
-      />
-      <TravelSection
         Icon={Bus}
         type={t('travel_note')}
         title={t('how_to_get_around_in_copenhagen')}
@@ -82,6 +76,12 @@ export const Travel = () => {
         type={t('travel_note')}
         title={t('transport_to_reception')}
         description={t('transport_to_reception_description')}
+      />
+      <TravelSection
+        Icon={Car}
+        type={t('rental_car')}
+        title={t('rental_car_title')}
+        description={t('rental_car_description')}
       />
     </div>
   )

@@ -86,7 +86,7 @@ const ScheduleItem = ({
 }
 
 const DateSeparator = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex w-full items-center">
+  <div className="my-8 flex w-full items-center">
     <div className="h-0.5 w-full rounded bg-stone-300" />
     <Title className="mx-4 whitespace-nowrap font-bold">{children}</Title>
     <div className="h-0.5 w-full rounded bg-stone-300" />
@@ -98,7 +98,7 @@ export const Schedule = () => {
   return (
     <div className="flex flex-col items-center gap-8">
       <Title>{t('title')}</Title>
-      <Description className="mb-8">{t('description')}</Description>
+      <Description>{t('description')}</Description>
       <DateSeparator>{t('welcome_event_date')}</DateSeparator>
 
       <ScheduleItem
