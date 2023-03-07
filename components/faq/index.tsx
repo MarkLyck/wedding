@@ -23,7 +23,7 @@ export const Faq = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       <Title>{t('title')}</Title>
-      <Description className="mb-8">{t('description')}</Description>
+      <Description className="mb-16">{t('description')}</Description>
       <FaqItem
         title={t('when_should_i_arrive_question')}
         description={t('when_should_i_arrive_answer')}
