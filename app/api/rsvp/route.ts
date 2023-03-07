@@ -7,7 +7,6 @@ const AIRTABLE_API_KEY =
 
 export async function POST(request: Request) {
   const body = await request.json()
-  console.log('🔈 ~ body:', body)
 
   const res = await axios.post(
     'https://api.airtable.com/v0/appDPPY0ly7ZgzTd2/Table%201',

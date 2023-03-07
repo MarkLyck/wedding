@@ -13,7 +13,7 @@ const FaqItem = ({
   <div className="flex max-w-2xl flex-col gap-4">
     <Title>{title}</Title>
     <Description>{description}</Description>
-    <div className="mb-8 mt-8 h-[1px] w-full rounded bg-zinc-400" />
+    <div className="my-8 h-[1px] w-full rounded bg-zinc-400" />
   </div>
 )
 
