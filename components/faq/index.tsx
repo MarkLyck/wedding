@@ -36,6 +36,10 @@ export const Faq = () => {
         title={t('covid_restrictions_question')}
         description={t('covid_restrictions_answer')}
       />
+      <FaqItem
+        title={t('bus_pickup_location_question')}
+        description={t('bus_pickup_location_answer')}
+      />
       <Description>
         {t('end_text')}{' '}
         <a href="mailto:07gracepark@gmail.com" className="underline">
