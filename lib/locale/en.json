@@ -1,7 +1,7 @@
 {
   "common": {
     "language": "Dansk",
-    "footer": "With love, Grace & Mark"
+    "footer": "With Love, Grace & Mark"
   },
   "navigation": {
     "home": "Home",
@@ -36,20 +36,20 @@
     "description": "Feel free to join us for any part of the events - we can't wait to celebrate with you!",
     "welcome_event_date": "THURSDAY, JUNE 1, 2023",
     "welcome_event_time": "5:30 PM - 9:00 PM",
-    "welcome_event_title": "CANAL CRUISE & WELCOME EVENT",
+    "welcome_event_title": "Canal cruise & welcome event",
     "welcome_event_name": "Ofelia Plads",
     "welcome_event_description": "If you arrive in Copenhagen early - which we highly recommend - please join us for our welcome event! Everyone is welcome to join us, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads at 5:30 pm where we will begin a 1-hour canal tour of Copenhagen's historical sites and iconic canals. After the boat tour, we will enjoy food and drinks by the water and end the evening watching the sunset! Please let us know if you can make it and if we should reserve a spot for you.\n\n*Please note that this is a rain or shine event! In case it rains there will be a convertible roof.",
     "welcome_event_address": "Kvæsthusbroen 1, København, 1250, Denmark",
 
     "ceremony_date": "FRIDAY, JUNE 2, 2023",
-    "ceremony_title": "CHURCH CEREMONY",
-    "ceremony_time": "2:00 PM - 3:00 PM",
-    "ceremony_name": "Allerslev kirke",
+    "ceremony_title": "Church ceremony",
+    "ceremony_time": "2:00 PM - 3:30 PM",
+    "ceremony_name": "Allerslev Kirke",
     "ceremony_address": "17 Lejrevej, Lejre, 4320, Denmark",
     "ceremony_description": "Transportation will be provided to and from the wedding - please meet us at Copenhagen central bus terminal at 1:15 pm for pickup and it will be a 45-minute drive to Allerslev church in Lejre. After the ceremony, the bus will depart at 3:30 pm to Restaurant Herthadalen where the reception will be held (it is a short 7-minute drive).",
 
     "reception_name": "Restaurant Herthadalen",
-    "reception_title": "RECEPTION, DINNER & GAMES",
+    "reception_title": "Reception",
     "reception_time": "4:00 PM - 11:00 PM",
     "reception_address": "Slangealleen 1, Lejre, 4320, Denmark",
     "reception_description": "A cocktail hour will begin at 4:00 pm, so you may arrive at any point between then and when dinner starts at 6:00 pm.",
@@ -62,7 +62,7 @@
     "saturday_event_address": "Æbeløgade 4, København Ø, 2100, Denmark",
 
     "sunday_event_date": "SUNDAY, JUNE 4, 2023",
-    "sunday_event_title": "SUNDAY SUNBATHING AT THE HARBOUR",
+    "sunday_event_title": "Sunbathe by the Harbor",
     "sunday_event_name": "La Banchina",
     "sunday_event_time": "12:00 PM",
     "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing and enjoy some fresh seafood and natural wine! We will book a sauna session for those who want to take a dip in the water and warm up after.",
@@ -79,24 +79,24 @@
     "getting_to_copenhagen_description": "Copenhagen has only one international airport to fly into: Københavns Lufthavn CPH. Taking the metro from the airport to your hotel or Airbnb is the easiest mode of transport as it runs 24/7. The metro station is located in direct extension of Terminal 3. Tickets for the Metro can be purchased at the station and they take all credit cards. Use the M2 line to get direct to the city center in just 15 minutes.\n\n*Please note that Uber is not accessible in Denmark.",
     "renting_an_apartment": "Renting an apartment or house",
     "airbnb": "AirBnB",
-    "airbnb_description": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center in København K. Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
+    "airbnb_description": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center \"Indre By\". Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
     "hotel": "Hotel",
     "hotel_title": "Kanalhuset",
-    "hotel_description": "62A Overgaden Oven Vandet, København,1415\n\nApartment-style hotel rooms by the canal. If you would like to reserve a room, reach out to us and we can help to coordinate for a small group discount.",
+    "hotel_description": "62A Overgaden Oven Vandet, København, 1415\n\nApartment-style hotel rooms by the canal. If you would like to reserve a room, reach out to us and we can help to coordinate for a small group discount.",
     "rental_car": "Rental car",
     "rental_car_title": "Europecar Københavns lufthavn Kastrup",
-    "rental_car_description": "2 Lufthavnsboulevarden, Kastrup, 2770, Denmark +45 32 50 30 90\n\nYou can also rent a car to travel at your own pace. Use the DK website domain for lower prices. Pickup location is Københavns Lufthavn.",
+    "rental_car_description": "2 Lufthavnsboulevarden, Kastrup, 2770, Denmark \n\nYou can also rent a car to travel at your own pace. Use the DK website domain for lower prices. Pickup location is Københavns Lufthavn.\n\n+45 32 50 30 90",
     "travel_note": "Travel note",
     "how_to_get_around_in_copenhagen": "How to get around in Copenhagen",
-    "how_to_get_around_in_copenhagen_description": "The main mode of transportation in Copenhagen is by bike, otherwise the public transport system is very easy to use. You can go by bus, the S-train, underground metro, rent a car or even walk. \n\nYou may find it helpful to download the public transport app, called \"rejseplanen\". This will provide up-to-date timetables and journey planning tools to help you find your way around. Please note Uber is not accessible in Denmark.",
+    "how_to_get_around_in_copenhagen_description": "The main mode of transportation for locals is by bike, otherwise the public transport system is very easy to use. You can go by bus, the S-train, underground metro, rent a car or even walk. \n\nYou may find it helpful to download the public transport app, called \"rejseplanen\". This will provide up-to-date timetables and journey planning tools to help you find your way around. Please note Uber is not accessible in Denmark.",
     "how_to_get_around_in_denmark": "How to get around in Denmark",
-    "how_to_get_around_in_denmark_description": "If you are planning to travel around Denmark after the wedding, it may be helpful to know that Denmark is made up of three main land areas - Jylland, Fyn & Sjælland (where Copenhagen is). These areas can be accessed by bus, train, plane, and car. SB is the train company that connects Copenhagen to other areas of Denmark by train, and tickets can be bought here: www.dsb.dk/en",
+    "how_to_get_around_in_denmark_description": "If you are planning to travel around Denmark after the wedding, it may be helpful to know that Denmark is made up of three main land areas - Jylland, Fyn & Sjælland (where Copenhagen is). These areas can be accessed by bus, train, plane and car. SB is the train company that connects Copenhagen to other areas of Denmark by train, and tickets can be bought here: www.dsb.dk/en",
     "transport_to_reception": "Transport to reception",
     "transport_to_reception_description": "We will be providing a coach service to take guests from Copenhagen to the wedding venue to reception and returning to Copenhagen after the evening celebrations. Please let us know if you would like a seat on the bus so that we can book the appropriate size coach."
   },
   "registry": {
     "title": "registry",
-    "description": "You're traveling from near and far, just having you there celebrating with us is enough of a gift for us! But if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift could be 'vouchers' with a creative idea for what your gift could be used for!\n\nHere is some inspiration for wedding gifts.",
+    "description": "You're traveling from near and far, and just having you celebrating with us is enough of a gift for us! But if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift could be 'vouchers' with a creative idea for what your gift could be used for!\n\nHere is some inspiration for wedding gifts.",
     "gift_1_title": "Honeymoon resort",
     "gift_1_description": "We would love to spend our honeymoon at a beautiful resort!",
     "gift_2_title": "Date night!",
@@ -117,16 +117,14 @@
   "faq": {
     "title": "FAQ",
     "description": "If you have any other questions than what we have listed here, please reach out to Mark at hello@marklyck.com.",
+    "end_text": "If you have any other questions please email us at",
+    "email": "07gracepark@gmail.com",
     "when_should_i_arrive_question": "WHEN SHOULD I ARRIVE IN COPENHAGEN?",
     "when_should_i_arrive_answer": "Preferably by Thursday- We will have a welcome event on Thursday night in order to welcome our out-of-town guests. Let us know when you will be arriving and we will do our best to organize something on the days you are in Copenhagen.",
-    "where_should_i_stay_question": "WHERE SHOULD I STAY?",
-    "where_should_i_stay_answer": "Luckily Copenhagen is a manageable city to get around in - wherever you end up staying shouldn't be an issue when traveling to any of our wedding festivities. However, we suggest to stay in the city center, near København K. Once you have settled on a place to stay, let us know and we can help with instructions on how to get from the airport to your hotel/Airbnb as well as specific directions to the ceremony and surrounding events.",
     "what_is_the_dress_code_question": "WHAT IS THE DRESS CODE?",
     "what_is_the_dress_code_answer": "Your most dashing attire, and perhaps something warm on top! Please be prepared for Copenhagen weather in June which can vary from rain to sunshine and range between 50-70s °F.",
     "covid_restrictions_question": "ARE THERE ANY COVID RESTRICTIONS I SHOULD BE AWARE OF?",
-    "covid_restrictions_answer": "There are no Covid-19 related restrictions in Denmark and no vaccines or tests are required to enter the Country.\n\nSee https://coronasmitte.dk for any Covid related information.",
-    "can_i_bring_a_guest_question": "CAN I BRING A GUEST?",
-    "can_i_bring_a_guest_answer": "When you fill out your RSVP, just enter your full name and it will let you know who in your family is invited and if we have a guest listed for you. We wanted to keep the wedding more intimate and wanted to be surrounded by our closest friends and family, so if you did not get a plus one, we hope you can understand where we are coming from."
+    "covid_restrictions_answer": "There are no Covid-19 related restrictions in Denmark and no vaccines or tests are required to enter the Country.\n\nSee https://coronasmitte.dk for any Covid related information."
   },
   "rsvp_form": {
     "rsvp": "RSVP",
