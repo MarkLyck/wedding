@@ -13,7 +13,7 @@ const FaqItem = ({
   <div className="flex max-w-2xl flex-col gap-4">
     <Title>{title}</Title>
     <Description>{description}</Description>
-    <div className="mb-8 mt-8 h-[1px] w-full rounded bg-zinc-400" />
+    <div className="my-8 h-[1px] w-full rounded bg-zinc-400" />
   </div>
 )
 
@@ -23,7 +23,7 @@ export const Faq = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       <Title>{t('title')}</Title>
-      <Description className="mb-8">{t('description')}</Description>
+      <Description className="mb-16">{t('description')}</Description>
       <FaqItem
         title={t('when_should_i_arrive_question')}
         description={t('when_should_i_arrive_answer')}
