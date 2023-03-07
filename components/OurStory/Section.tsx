@@ -56,7 +56,7 @@ const textContainerStyles = cva(
   }
 )
 
-const descriptionStyles = cva(['max-w-sm', 'text-center'], {
+const descriptionStyles = cva(['max-w-sm', 'text-center', 'text-[15px]'], {
   variants: {
     direction: {
       right: ['md:text-left', 'md:mr-auto'],
