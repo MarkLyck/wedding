@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
@@ -19,23 +19,27 @@ const FaqItem = ({
 
 export const Faq = () => {
   const t = useTranslations('faq')
+  const locale = useLocale()
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <Title>{t('title')}</Title>
-      <Description className="mb-16">{t('description')}</Description>
-      <FaqItem
-        title={t('when_should_i_arrive_question')}
-        description={t('when_should_i_arrive_answer')}
-      />
+      <Title className="mb-12">{t('title')}</Title>
+      {locale === 'en' ? (
+        <FaqItem
+          title={t('when_should_i_arrive_question')}
+          description={t('when_should_i_arrive_answer')}
+        />
+      ) : null}
       <FaqItem
         title={t('what_is_the_dress_code_question')}
         description={t('what_is_the_dress_code_answer')}
       />
-      <FaqItem
-        title={t('covid_restrictions_question')}
-        description={t('covid_restrictions_answer')}
-      />
+      {locale === 'en' ? (
+        <FaqItem
+          title={t('covid_restrictions_question')}
+          description={t('covid_restrictions_answer')}
+        />
+      ) : null}
       <FaqItem
         title={t('bus_pickup_location_question')}
         description={t('bus_pickup_location_answer')}

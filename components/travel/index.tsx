@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { Bus, Car, Home, Plane, Train } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
@@ -30,6 +30,8 @@ const TravelSection = ({
 
 export const Travel = () => {
   const t = useTranslations('travel')
+  const locale = useLocale()
+
   return (
     <div className="flex flex-col items-center gap-12">
       <Title>{t('title')}</Title>
@@ -41,48 +43,58 @@ export const Travel = () => {
         alt="nyhavn"
         className="rounded"
       />
-      <TravelSection
-        Icon={Plane}
-        type={t('flights')}
-        title={t('getting_to_copenhagen')}
-        description={t('getting_to_copenhagen_description')}
-      />
-      <TravelSection
-        Icon={Home}
-        type={t('renting_an_apartment')}
-        title={t('airbnb')}
-        description={t('airbnb_description')}
-      />
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Plane}
+          type={t('flights')}
+          title={t('getting_to_copenhagen')}
+          description={t('getting_to_copenhagen_description')}
+        />
+      ) : null}
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Home}
+          type={t('renting_an_apartment')}
+          title={t('airbnb')}
+          description={t('airbnb_description')}
+        />
+      ) : null}
       <TravelSection
         Icon={Home}
         type={t('hotel')}
         title={t('hotel_title')}
         description={t('hotel_description')}
       />
-      <TravelSection
-        Icon={Bus}
-        type={t('travel_note')}
-        title={t('how_to_get_around_in_copenhagen')}
-        description={t('how_to_get_around_in_copenhagen_description')}
-      />
-      <TravelSection
-        Icon={Train}
-        type={t('travel_note')}
-        title={t('how_to_get_around_in_denmark')}
-        description={t('how_to_get_around_in_denmark_description')}
-      />
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Bus}
+          type={t('travel_note')}
+          title={t('how_to_get_around_in_copenhagen')}
+          description={t('how_to_get_around_in_copenhagen_description')}
+        />
+      ) : null}
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Train}
+          type={t('travel_note')}
+          title={t('how_to_get_around_in_denmark')}
+          description={t('how_to_get_around_in_denmark_description')}
+        />
+      ) : null}
       <TravelSection
         Icon={Bus}
         type={t('travel_note')}
         title={t('transport_to_reception')}
         description={t('transport_to_reception_description')}
       />
-      <TravelSection
-        Icon={Car}
-        type={t('rental_car')}
-        title={t('rental_car_title')}
-        description={t('rental_car_description')}
-      />
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Car}
+          type={t('rental_car')}
+          title={t('rental_car_title')}
+          description={t('rental_car_description')}
+        />
+      ) : null}
     </div>
   )
 }
