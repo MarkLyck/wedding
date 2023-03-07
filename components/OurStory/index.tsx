@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl'
 import { SectionHeader } from '@/ui/SectionHeader'
 
 import { Section } from './Section'
-import howWeMetImg from './images/after_we_met.jpg'
-import newYorkImg from './images/new_york.jpg'
+import howWeMetImg from './images/after_we_met2.jpg'
+import newYorkImg from './images/new_york2.jpg'
 import proposalImg from './images/proposal.jpg'
 import weddingImg from './images/wedding.jpg'
 
