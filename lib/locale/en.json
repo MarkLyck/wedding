@@ -13,7 +13,7 @@
   "home": {
     "hero": {
       "title": "Let's celebrate!",
-      "date": "June 2, 2023 \n\nDenmark"
+      "date": "June 2, 2023 Denmark"
     }
   },
   "our_story": {
@@ -28,7 +28,7 @@
     "got_engaged_description": "In October we made a trip to the Dominican Republic. On the first morning, Mark woke Grace up at 5:55am, eager to start the day. Grace still in a sleepy daze was not at all amused! She refused to get out of bed and snoozed multiple times. But Mark had a surprise in store for her. He took her to Altos de Chavón, a beautiful Mediterranean-style town where they met with a photographer for a “casual photoshoot” and Mark proposed to her in the picturesque setting. Grace was overjoyed and said yes! She wished she had worn better shoes that day. They celebrated with a romantic private dinner on the beach and a week of fun exploring, and Grace was relieved she wouldn’t have to wake up at the crack of dawn again anytime soon.",
     "got_married_title": "Married in D.C",
     "got_married_date": "November 2021",
-    "got_married_description": "After over a year of waiting for the fiancé visa, Mark was finally able to come to the US again and Grace and Mark got married in front of the National Museum of Art in Washington D.C.  While it was just the two of us and a couple of pigeons cooing as witnesses, and despite the feathered audience objecting to our ceremony, it was a beautiful day full of love, laughter, and joy with some delicious pasta.",
+    "got_married_description": "After over a year of waiting for the fiancé visa, Mark was finally able to come to the US again and Grace and Mark got married in front of the National Museum of Art in Washington D.C.  While it was just the two of us and a couple of pigeons cooing as witnesses, and despite the feathered audience objecting to our ceremony, it was a beautiful day full of love, laughter, joy, and some delicious pasta.",
     "celebrating_our_marriage": "Celebrating our marriage in Denmark with you!"
   },
   "schedule": {
@@ -38,7 +38,7 @@
     "welcome_event_time": "5:30 PM - 9:00 PM",
     "welcome_event_title": "Canal cruise & welcome event",
     "welcome_event_name": "Ofelia Plads",
-    "welcome_event_description": "If you arrive in Copenhagen early - which we highly recommend - please join us for our welcome event! Everyone is welcome to join us, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads at 5:30 pm where we will begin a 1-hour canal tour of Copenhagen's historical sites and iconic canals. After the boat tour, we will enjoy food and drinks by the water and end the evening watching the sunset! Please let us know if you can make it and if we should reserve a spot for you.\n\n*Please note that this is a rain or shine event! In case it rains there will be a convertible roof.",
+    "welcome_event_description": "If you arrive in Copenhagen early - which we highly recommend - please join us for our welcome event! Everyone is welcome to join us, especially those who've made a long journey to be with us on our special day. Please meet us at Ofelia Plads at 5:30 pm where we will begin a 1-hour canal tour of Copenhagen's historical sites and iconic canals. After the boat tour, we will enjoy food and drinks by the water. Please let us know if you can make it and if we should reserve a spot for you.",
     "welcome_event_address": "Kvæsthusbroen 1, København, 1250, Denmark",
 
     "ceremony_date": "FRIDAY, JUNE 2, 2023",
@@ -46,7 +46,7 @@
     "ceremony_time": "2:00 PM - 3:30 PM",
     "ceremony_name": "Allerslev Kirke",
     "ceremony_address": "17 Lejrevej, Lejre, 4320, Denmark",
-    "ceremony_description": "Transportation will be provided to and from the wedding - please meet us at Copenhagen central bus terminal at 1:15 pm for pickup and it will be a 45-minute drive to Allerslev church in Lejre. After the ceremony, the bus will depart at 3:30 pm to Restaurant Herthadalen where the reception will be held (it is a short 7-minute drive).",
+    "ceremony_description": "Transportation will be provided to and from the wedding - please meet us at Copenhagen central bus terminal at 1:15 pm for pickup and it will be a 45-minute drive to Allerslev church in Lejre. After the ceremony, the bus will depart at 3:30 pm to Restaurant Herthadalen where the reception will be held.",
 
     "reception_name": "Restaurant Herthadalen",
     "reception_title": "Reception",
@@ -65,7 +65,7 @@
     "sunday_event_title": "Sunbathe by the Harbor",
     "sunday_event_name": "La Banchina",
     "sunday_event_time": "12:00 PM",
-    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing and enjoy some fresh seafood and natural wine! We will book a sauna session for those who want to take a dip in the water and warm up after.",
+    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing and enjoy some fresh seafood and natural wine!",
     "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
 
     "map": "map",
@@ -116,7 +116,6 @@
   },
   "faq": {
     "title": "FAQ",
-    "description": "If you have any other questions than what we have listed here, please reach out to Mark at hello@marklyck.com.",
     "end_text": "If you have any other questions please email us at",
     "email": "07gracepark@gmail.com",
     "when_should_i_arrive_question": "WHEN SHOULD I ARRIVE IN COPENHAGEN?",
@@ -126,7 +125,7 @@
     "covid_restrictions_question": "ARE THERE ANY COVID RESTRICTIONS I SHOULD BE AWARE OF?",
     "covid_restrictions_answer": "There are no Covid-19 related restrictions in Denmark and no vaccines or tests are required to enter the Country.\n\nSee https://coronasmitte.dk for any Covid related information.",
     "bus_pickup_location_question": "WHAT IS THE BUS PICK UP LOCATION?",
-    "bus_pickup_location_answer": "It is by the Copenhagen central bus and train terminal and the address is\n\nIngerslevsgade 22 , 1705 Copenhagen V, Denmark."
+    "bus_pickup_location_answer": "It is by the Copenhagen central bus and train terminal, the bus leaves at 1:15pm and the address is\n\nIngerslevsgade 22 , 1705 Copenhagen V, Denmark."
   },
   "rsvp_form": {
     "rsvp": "RSVP",
@@ -138,6 +137,7 @@
     "who_is_attending": "Who is attending?",
     "no_food_restrictions": "No food restrictions",
     "vegetarian": "Vegetarian",
+    "pescetarian": "Pescetarian",
     "food_allergies": "Food allergies",
     "add_a_guest": "Add a guest",
     "do_you_need_transportation": "Do you need transportation from Copenhagen to and from the venue?",
