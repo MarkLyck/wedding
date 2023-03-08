@@ -21,6 +21,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
+import { useToast } from '@/hooks/use-toast'
 import { analyticsIdentify } from '@/lib/analytics'
 
 import { guestList } from './guests'
@@ -81,6 +82,7 @@ type RSVPFormProps = {
 }
 
 export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
+  const { toast } = useToast()
   const posthog = usePostHog()
   const t = useTranslations('rsvp_form')
   const [formState, setFormState] = useState<FormState>(initialFormState)
@@ -91,6 +93,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
   const mainGuest = guestList.find(
     (guest) => guest.name === formState.name.toLowerCase()
   )
+  console.log('🔈 ~ mainGuest:', mainGuest)
   const guestFound = mainGuest !== undefined
 
   useEffect(() => {
@@ -413,9 +416,42 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
       </div>
       <DialogFooter>
         <Button
+          id="id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz-and-amanda"
           type="submit"
           onClick={handleSubmit}
+          onMouseOver={
+            mainGuest?.name === 'tomasz rekawek' ||
+            mainGuest?.name === 'amanda oliver'
+              ? () => {
+                  toast({
+                    title: '👋 Oh hi Tomasz & Amanda',
+                    description: (
+                      <div>
+                        Just click{' '}
+                        <span
+                          onClick={handleSubmit}
+                          className="hover:cursor-pointer hover:text-blue-600"
+                        >
+                          Submit
+                        </span>{' '}
+                        to RSVP
+                      </div>
+                    ),
+                  })
+
+                  const button = document.getElementById(
+                    'id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz-and-amanda'
+                  )
+                  if (!button) return
+
+                  button.style.position = 'absolute'
+                  button.style.left = `${Math.ceil(Math.random() * 90)}%`
+                  button.style.top = `${Math.ceil(Math.random() * 90)}%`
+                }
+              : undefined
+          }
           disabled={!guestFound || isLoading || formState.is_attending === null}
+          className="duration-[5] transition-all"
         >
           {t('submit')}
         </Button>
