@@ -158,13 +158,13 @@ export const guestList: Guest[] = [
     additionalGuests: 1,
   },
   {
-    name: 'shranna lim',
+    name: 'shranna yi',
     linkedGuests: ['daniel lim'],
     additionalGuests: 1,
   },
   {
     name: 'daniel lim',
-    linkedGuests: ['shranna lim'],
+    linkedGuests: ['shranna yi'],
     additionalGuests: 1,
   },
   {
