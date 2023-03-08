@@ -96,14 +96,15 @@
   },
   "registry": {
     "title": "registry",
-    "description": "You're traveling from near and far, and just having you celebrating with us is enough of a gift for us! But if you would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift could be 'vouchers' with a creative idea for what your gift could be used for!\n\nHere is some inspiration for wedding gifts.",
+    "description": "You're traveling from near and far, and just having you celebrating with us is enough of a gift for us! But if you are coming to the wedding and would like to bless us with a gift, please keep in mind that due to travel in our current season of life we may not have much room for storage. Therefore a perfect gift could be 'vouchers' with a creative idea for what your gift could be used for!\n\nHere is some inspiration for wedding gifts.",
+    "contribute": "Contribute",
     "gift_1_title": "Honeymoon resort",
     "gift_1_description": "We would love to spend our honeymoon at a beautiful resort!",
     "gift_2_title": "Date night!",
     "gift_2_description": "We love to eat out and try new restaurants and go to events!",
     "gift_3_title": "Adventures for our honeymoon",
     "gift_3_description": "We love doing active things together when on vacation like water sports, horseback rides, snowmobiles tours etc.",
-    "gift_4_title": "Road Trip",
+    "gift_4_title": "Road trip",
     "gift_4_description": "We've always wanted to do a road trip in the US!",
     "gift_5_title": "Cooking lesson for two",
     "gift_5_description": "We enjoy cooking together, but we would love to learn some new recipes!",
@@ -111,8 +112,8 @@
     "gift_6_description": "Baking together is always fun, especially danish pastries!",
     "gift_7_title": "House savings",
     "gift_7_description": "We're saving up to buy our first home together!",
-    "gift_8_title": "Food Subscription",
-    "gift_8_description": "We have fun trying out new recipes and food subscriptions make this so easy!"
+    "gift_8_title": "Meal subscription",
+    "gift_8_description": "We have fun trying out new recipes and meal subscriptions make this so easy!"
   },
   "faq": {
     "title": "FAQ",
