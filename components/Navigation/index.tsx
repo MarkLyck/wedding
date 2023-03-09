@@ -1,5 +1,7 @@
 'use client'
 
+import { ReactNode } from 'react'
+
 import { Link, useTranslations } from 'next-intl'
 
 import { RSVP } from '@/components/rsvp'
@@ -22,6 +24,10 @@ const NavLink = ({
   </Link>
 )
 
+const ListItem = ({ children }: { children: ReactNode }) => (
+  <li className="">{children}</li>
+)
+
 export const Navigation = () => {
   const t = useTranslations('navigation')
 
@@ -35,28 +41,28 @@ export const Navigation = () => {
           Grace & Mark
         </Link>
       </div>
-      <div className="flex w-full justify-center ">
-        <ul className="flex items-center">
-          <li>
+      <div className="flex w-full justify-center">
+        <ul className="flex flex-wrap items-center justify-center">
+          <ListItem>
             <NavLink href="/" className="after:content-[]">
               {t('home')}
             </NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink href="/schedule">{t('schedule')}</NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink href="/travel">{t('travel')}</NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink href="/registry">{t('registry')}</NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink href="/faq">{t('faq')}</NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <RSVP />
-          </li>
+          </ListItem>
         </ul>
       </div>
     </div>

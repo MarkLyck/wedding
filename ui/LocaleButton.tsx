@@ -15,6 +15,7 @@ export const LocaleButton = () => {
     <Button
       onClick={() => router.push(locale === 'en' ? '/dk' : '/en')}
       size="sm"
+      className="hidden sm:block"
     >
       <span style={{ marginRight: 8 }}>{locale === 'en' ? '🇩🇰' : '🇺🇸'}</span>
       <span>{t('language')}</span>
