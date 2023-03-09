@@ -11,9 +11,9 @@ import weddingImg from './images/wedding.jpg'
 export const OurStory = () => {
   const t = useTranslations('our_story')
   return (
-    <div className="flex flex-col gap-8 p-8">
+    <div className="flex flex-col gap-0 px-0 py-4 sm:gap-8 sm:p-8">
       <SectionHeader title={t('title')} description="" />
-      <div className="relative flex flex-col gap-16 p-8">
+      <div className="relative flex flex-col gap-16 p-4 sm:p-8">
         <div className="absolute inset-y-4 left-1/2 w-0.5 bg-zinc-300 opacity-0 md:opacity-100" />
         <Section
           title={t('how_we_met_title')}

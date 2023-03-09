@@ -13,7 +13,15 @@ type SectionProps = {
 }
 
 const sectionStyles = cva(
-  ['flex', 'flex-col', 'w-full', 'justify-center', 'gap-24', 'items-center'],
+  [
+    'flex',
+    'flex-col',
+    'w-full',
+    'justify-center',
+    'gap-8',
+    'sm:gap-24',
+    'items-center',
+  ],
   {
     variants: {
       direction: {
