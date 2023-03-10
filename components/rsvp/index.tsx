@@ -14,6 +14,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { useToast } from '@/hooks/use-toast'
+import { cn } from '@/lib/utils'
 
 import { RSVPForm } from './form'
 import type { SubmitData } from './form'
@@ -23,14 +24,21 @@ const createGuest = async (data: SubmitData) => {
   return await axios.post('/api/rsvp', data)
 }
 
-const dialogContentStyles = cva(['overflow-y-auto'], {
-  variants: {
-    isSuccess: {
-      true: 'sm:max-w-[400px]',
-      false: 'sm:max-w-[600px]',
+const dialogContentStyles = cva(
+  [
+    'overflow-y-auto',
+    'max-h-[calc(100vh-100px)]',
+    'sm:max-h-[calc(100vh-60px)]',
+  ],
+  {
+    variants: {
+      isSuccess: {
+        true: 'sm:max-w-[400px]',
+        false: 'sm:max-w-[600px]',
+      },
     },
-  },
-})
+  }
+)
 
 export function RSVP() {
   const t = useTranslations('rsvp_form')
@@ -59,10 +67,7 @@ export function RSVP() {
           {t('rsvp')}
         </a>
       </DialogTrigger>
-      <DialogContent
-        className={dialogContentStyles({ isSuccess })}
-        style={{ maxHeight: 'calc(100vh - 60px)' }}
-      >
+      <DialogContent className={cn(dialogContentStyles({ isSuccess }))}>
         {isSuccess ? (
           <Success
             isAttending={
