@@ -23,7 +23,7 @@ const createGuest = async (data: SubmitData) => {
   return await axios.post('/api/rsvp', data)
 }
 
-const dialogContentStyles = cva('', {
+const dialogContentStyles = cva(['overflow-y-auto'], {
   variants: {
     isSuccess: {
       true: 'sm:max-w-[400px]',
@@ -59,7 +59,10 @@ export function RSVP() {
           {t('rsvp')}
         </a>
       </DialogTrigger>
-      <DialogContent className={dialogContentStyles({ isSuccess })}>
+      <DialogContent
+        className={dialogContentStyles({ isSuccess })}
+        style={{ maxHeight: 'calc(100vh - 60px)' }}
+      >
         {isSuccess ? (
           <Success
             isAttending={
