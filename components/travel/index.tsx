@@ -6,8 +6,8 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
 
-import nyhavnImg from './images/nyhavn.jpg'
 import lake from './images/lake.jpg'
+import nyhavnImg from './images/nyhavn.jpg'
 
 const TravelSection = ({
   type,
