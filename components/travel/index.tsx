@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Description } from '@/ui/Description'
 import { Title } from '@/ui/Title'
 
+import lake from './images/lake.jpg'
 import nyhavnImg from './images/nyhavn.jpg'
 
 const TravelSection = ({
@@ -36,13 +37,23 @@ export const Travel = () => {
     <div className="flex flex-col items-center gap-12">
       <Title>{t('title')}</Title>
       <Description>{t('description')}</Description>
-      <Image
-        src={nyhavnImg}
-        height={280}
-        width={600}
-        alt="nyhavn"
-        className="rounded"
-      />
+      {locale === 'en' ? (
+        <Image
+          src={nyhavnImg}
+          height={280}
+          width={600}
+          alt="nyhavn"
+          className="rounded"
+        />
+      ) : (
+        <Image
+          src={lake}
+          height={280}
+          width={600}
+          alt="herthadalen"
+          className="rounded"
+        />
+      )}
       {locale === 'en' ? (
         <TravelSection
           Icon={Plane}
