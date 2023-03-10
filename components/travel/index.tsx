@@ -44,14 +44,16 @@ export const Travel = () => {
           width={600}
           alt="nyhavn"
           className="rounded"
-        />) : (<Image
+        />
+      ) : (
+        <Image
           src={lake}
           height={280}
           width={600}
           alt="herthadalen"
           className="rounded"
-        />)
-      }
+        />
+      )}
       {locale === 'en' ? (
         <TravelSection
           Icon={Plane}
