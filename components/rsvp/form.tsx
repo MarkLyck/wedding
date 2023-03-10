@@ -333,7 +333,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                 key="transportation"
                 className="flex flex-col items-start gap-4"
               >
-                <Label className="text-right">
+                <Label className="text-left leading-5">
                   {t('do_you_need_transportation')}
                 </Label>
                 <div className="flex items-center gap-2">
