@@ -93,8 +93,21 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
   const mainGuest = guestList.find(
     (guest) => guest.name === formState.name.toLowerCase()
   )
-  console.log('🔈 ~ mainGuest:', mainGuest)
   const guestFound = mainGuest !== undefined
+
+  useEffect(() => {
+    const formName = formState.name.toLowerCase()
+    if (
+      formName.includes(' and ') ||
+      formName.includes(' & ') ||
+      formName.includes(' og ')
+    ) {
+      toast({
+        title: 'Invalid name format',
+        description: 'Please enter only the full name of one guest 🙂',
+      })
+    }
+  }, [formState.name.toLowerCase()])
 
   useEffect(() => {
     if (mainGuest) {
@@ -163,7 +176,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
               })
             }
             className="col-span-3 capitalize"
-            placeholder={t('first_and_last_name')}
+            placeholder="Grace Park"
           />
         </div>
         {mainGuest ? (
