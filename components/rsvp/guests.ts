@@ -242,4 +242,14 @@ export const guestList: Guest[] = [
     linkedGuests: ['rafael anachoreta'],
     additionalGuests: 1,
   },
+  {
+    name: 'christine kim',
+    linkedGuests: [],
+    additionalGuests: 0,
+  },
+  {
+    name: 'amanda schuck',
+    linkedGuests: [],
+    additionalGuests: 1,
+  },
 ].map((guest) => ({ ...guest, foodRestriction: 'none' }))
