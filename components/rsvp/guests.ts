@@ -209,12 +209,12 @@ export const guestList: Guest[] = [
   },
   {
     name: 'tomasz rekawek',
-    linkedGuests: ['amanda oliver'],
+    linkedGuests: [],
     additionalGuests: 1,
   },
   {
     name: 'amanda oliver',
-    linkedGuests: ['tomasz rekawek'],
+    linkedGuests: [],
     additionalGuests: 1,
   },
   {
