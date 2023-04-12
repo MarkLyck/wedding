@@ -63,7 +63,7 @@ export function RSVP() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <a className="after:content-[' '] before👈 relative cursor-pointer px-4 py-2 text-zinc-500 transition-colors duration-200 after:absolute after:top-1/2 after:left-0 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 after:bg-neutral-600 hover:text-black">
+        <a className="after:content-[' '] before👈 relative cursor-pointer px-4 py-2 text-zinc-500 transition-colors duration-200 after:absolute after:left-0 after:top-1/2 after:block after:h-4 after:w-0.5 after:-translate-y-1/2 after:bg-neutral-600 hover:text-black">
           {t('rsvp')}
         </a>
       </DialogTrigger>
