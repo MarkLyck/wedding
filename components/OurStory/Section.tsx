@@ -7,6 +7,7 @@ import { fancyFont } from '@/lib/fonts'
 type SectionProps = {
   title: string
   date: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageSrc: any
   description: string
   direction: 'left' | 'right'
