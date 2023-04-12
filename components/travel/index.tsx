@@ -18,6 +18,7 @@ const TravelSection = ({
   type: string
   title: string
   description: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Icon?: any
 }) => (
   <div className="flex max-w-2xl flex-col items-center gap-4">

@@ -46,6 +46,7 @@ type ScheduleItemProps = {
   time: string
   address: string
   mapsLink: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageSrc: any
 }
 

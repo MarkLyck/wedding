@@ -429,15 +429,14 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
       </div>
       <DialogFooter>
         <Button
-          id="id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz-and-amanda"
+          id="id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz"
           type="submit"
           onClick={handleSubmit}
           onMouseOver={
-            mainGuest?.name === 'tomasz rekawek' ||
-            mainGuest?.name === 'amanda oliver'
+            mainGuest?.name === 'tomasz rekawek'
               ? () => {
                   toast({
-                    title: '👋 Oh hi Tomasz & Amanda',
+                    title: '👋 Oh hi Tomasz',
                     description: (
                       <div>
                         Just click{' '}
@@ -453,7 +452,7 @@ export const RSVPForm = ({ submit, isLoading }: RSVPFormProps) => {
                   })
 
                   const button = document.getElementById(
-                    'id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz-and-amanda'
+                    'id-that-is-totally-not-used-to-move-the-submit-button-around-for-tomasz'
                   )
                   if (!button) return
 
