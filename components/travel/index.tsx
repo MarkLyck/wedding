@@ -77,6 +77,18 @@ export const Travel = () => {
         title={t('hotel_title')}
         description={t('hotel_description')}
       />
+      <TravelSection
+        Icon={Home}
+        type={t('hotel')}
+        title={t('hotel_title_2')}
+        description={t('hotel_description_2')}
+      />
+      <TravelSection
+        Icon={Home}
+        type={t('hotel')}
+        title={t('hotel_title_3')}
+        description={t('hotel_description_3')}
+      />
       {locale === 'en' ? (
         <TravelSection
           Icon={Bus}
