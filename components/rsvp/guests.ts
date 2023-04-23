@@ -40,7 +40,7 @@ export const guestList: Guest[] = [
   {
     name: 'søren lyck',
     linkedGuests: [],
-    additionalGuests: 3,
+    additionalGuests: 4,
   },
   {
     name: 'helle thrane',
