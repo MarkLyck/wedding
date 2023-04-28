@@ -50,7 +50,7 @@
 
     "reception_name": "Restaurant Herthadalen",
     "reception_title": "Reception",
-    "reception_time": "4:00 PM - 11:00 PM",
+    "reception_time": "4:00 PM - 00:00 AM",
     "reception_address": "Slangealleen 1, Lejre, 4320, Denmark",
     "reception_description": "Herthadalen is beautifully situated in Denmark’s new national park “Skjoldungernes Land”. A cocktail hour will begin at 4:00 pm, so you may arrive at any point between then and when dinner starts at 6:00 pm.",
 
@@ -65,7 +65,7 @@
     "sunday_event_title": "Sunbathe by the Harbor",
     "sunday_event_name": "La Banchina",
     "sunday_event_time": "12:00 PM",
-    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing and enjoy some fresh seafood and natural wine!",
+    "sunday_event_description": "If you are still in Copenhagen on Sunday, we would love to spend an afternoon with you at the Harbour Bath - join us for sunbathing and enjoy some fresh seafood and natural wine! \n\nLa Banchina is a walk-in restaurant but it's possible to reserve a sauna session in advance if you are planning to take a dip! Please check out their website: https://labanchina.dk",
     "sunday_event_address": "141 Refshalevej, København, 1432, Denmark",
 
     "map": "map",
