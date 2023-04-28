@@ -50,7 +50,7 @@
 
     "reception_name": "Restaurant Herthadalen",
     "reception_title": "Reception",
-    "reception_time": "16:00 - 23:00",
+    "reception_time": "16:00 - 00:00",
     "reception_address": "Slangealleen 1, Lejre, 4320",
     "reception_description": "Herthadalen ligger i Danmarks nye national park “Skjoldungernes Land”. En cocktailtime begynder kl. 16.00, så du kan ankomme på et hvilket som helst tidspunkt mellem det, og når middagen starter kl. 18.00.",
 
@@ -65,7 +65,7 @@
     "sunday_event_title": "Solbadning ved havnen",
     "sunday_event_name": "La Banchina",
     "sunday_event_time": "12:00",
-    "sunday_event_description": "Hvis du stadig er i København på søndag, vil vi gerne tilbringe eftermiddagen med dig på Havnebadet - tag med til solbadning og nyd frisk fisk, skaldyr og naturvin!",
+    "sunday_event_description": "Hvis du stadig er i København på søndag, vil vi gerne tilbringe eftermiddagen med dig på Havnebadet - tag med til solbadning og nyd frisk fisk, skaldyr og naturvin! \n\nLa Banchina er en restaurant, men det er muligt at reservere en sauna på forhånd, hvis du har planer om at dyppe i vandet! Se deres hjemmeside på: https://labanchina.dk",
     "sunday_event_address": "141 Refshalevej, København, 1432",
 
     "map": "kort",
