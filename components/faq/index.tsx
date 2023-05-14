@@ -26,6 +26,12 @@ export const Faq = () => {
       <Title className="mb-12">{t('title')}</Title>
       {locale === 'en' ? (
         <FaqItem
+          title={t('danish_traditions_question')}
+          description={t('danish_traditions_answer')}
+        />
+      ) : null}
+      {locale === 'en' ? (
+        <FaqItem
           title={t('when_should_i_arrive_question')}
           description={t('when_should_i_arrive_answer')}
         />
