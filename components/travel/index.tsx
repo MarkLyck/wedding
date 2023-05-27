@@ -119,6 +119,22 @@ export const Travel = () => {
           description={t('rental_car_description')}
         />
       ) : null}
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Plane}
+          type={t('travel_note')}
+          title={t('additional_travel_tips')}
+          description={t('additional_travel_tips_description')}
+        />
+      ) : null}
+      {locale === 'en' ? (
+        <TravelSection
+          Icon={Bus}
+          type={t('travel_note')}
+          title={t('day_passes')}
+          description={t('day_passes_description')}
+        />
+      ) : null}
     </div>
   )
 }
